@@ -1,0 +1,55 @@
+name: Refresh dashboard data
+
+on:
+  # Runs daily at 12:30 UTC — after StatsCan's usual 08:30 ET releases have
+  # had time to propagate, and well before most users would check the
+  # dashboard. Cron is unreliable to the minute, so don't expect exactness.
+  schedule:
+    - cron: "30 12 * * *"
+  # Allow manual triggering from the GitHub Actions UI
+  workflow_dispatch:
+  # Also rebuild whenever the fetch logic changes
+  push:
+    branches: [ main ]
+    paths:
+      - "scripts/build_dataset.py"
+      - ".github/workflows/refresh.yml"
+
+permissions:
+  contents: write  # needed to commit the refreshed data/data.json
+
+concurrency:
+  group: refresh-dashboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build dataset
+        run: python scripts/build_dataset.py
+
+      - name: Commit refreshed data (if changed)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/data.json; then
+            echo "No changes to data.json — nothing to commit."
+          else
+            git add data/data.json
+            git commit -m "chore(data): refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

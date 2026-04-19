@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canadian Recession Watch</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --bg-card: #f7f7f4;
+    --bg-strip: #1a1a2e;
+    --fg: #111;
+    --fg-muted: #666;
+    --fg-subtle: #999;
+    --border: rgba(0,0,0,0.08);
+    --grid: rgba(0,0,0,0.06);
+    --accent: #378ADD;
+    --green: #1D9E75;
+    --yellow: #D8A030;
+    --red: #C4564A;
+    --neutral: #888;
+    --recession: rgba(120,120,120,0.14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121215;
+      --bg-card: #1d1d22;
+      --bg-strip: #1a1a2e;
+      --fg: #e8e8e8;
+      --fg-muted: #999;
+      --fg-subtle: #666;
+      --border: rgba(255,255,255,0.08);
+      --grid: rgba(255,255,255,0.06);
+      --recession: rgba(200,200,200,0.10);
+    }
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    padding: 24px 20px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1 { font-size: 22px; font-weight: 500; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .subtitle { font-size: 13px; color: var(--fg-muted); margin-bottom: 18px; }
+  button {
+    cursor: pointer; font-family: inherit; background: transparent;
+    border: 0.5px solid var(--fg-subtle); border-radius: 8px;
+    padding: 4px 12px; font-size: 12px; color: inherit;
+  }
+  button:hover { background: var(--grid); }
+  button:disabled { opacity: 0.5; cursor: wait; }
+
+  /* Header info strip */
+  .info-strip {
+    display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
+    padding: 8px 14px; background: var(--bg-strip); color: #fff;
+    border-radius: 8px; margin-bottom: 14px; font-size: 12px;
+  }
+  .info-strip .label { color: rgba(255,255,255,0.55); }
+  .info-strip .val { color: #fff; font-weight: 500; }
+  .info-strip .sep { color: rgba(255,255,255,0.2); }
+  .info-strip button {
+    color: #fff; border-color: rgba(255,255,255,0.3); margin-left: auto;
+  }
+  .info-strip button:hover { background: rgba(255,255,255,0.1); }
+
+  /* Signal summary row */
+  .signal-row {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px;
+    margin-bottom: 18px;
+  }
+  .signal {
+    padding: 8px 10px; background: var(--bg-card); border-radius: 6px;
+    border-left: 3px solid var(--neutral); display: flex; flex-direction: column; gap: 2px;
+  }
+  .signal.green { border-left-color: var(--green); }
+  .signal.yellow { border-left-color: var(--yellow); }
+  .signal.red { border-left-color: var(--red); }
+  .signal .name { font-size: 11px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .signal .value { font-size: 15px; font-weight: 500; margin-top: 1px; }
+  .signal .verdict { font-size: 10px; color: var(--fg-subtle); margin-top: 1px; }
+  .signal.green .verdict { color: var(--green); }
+  .signal.yellow .verdict { color: var(--yellow); }
+  .signal.red .verdict { color: var(--red); }
+
+  /* Chart grid */
+  .chart-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  @media (max-width: 760px) {
+    .chart-grid { grid-template-columns: 1fr; }
+    .signal-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  .chart-card {
+    background: var(--bg-card); border-radius: 8px; padding: 14px 16px 10px;
+    border: 0.5px solid var(--border);
+  }
+  .chart-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; gap: 8px; }
+  .chart-title { font-size: 13px; font-weight: 500; }
+  .chart-latest { font-size: 18px; font-weight: 500; color: var(--fg); }
+  .chart-sub { font-size: 11px; color: var(--fg-muted); margin-bottom: 8px; }
+  .chart-canvas-wrap { position: relative; width: 100%; height: 160px; }
+  .chart-footer { font-size: 10px; color: var(--fg-subtle); margin-top: 6px; line-height: 1.4; }
+
+  /* Footer */
+  .methodology {
+    margin-top: 32px; padding-top: 18px; border-top: 0.5px solid var(--border);
+    font-size: 12px; color: var(--fg-muted); line-height: 1.65;
+  }
+  .methodology h2 { font-size: 13px; font-weight: 500; color: var(--fg); margin-bottom: 8px; }
+  .methodology a { color: var(--accent); text-decoration: none; }
+  .methodology a:hover { text-decoration: underline; }
+
+  .loading, .error {
+    padding: 40px; text-align: center; color: var(--fg-muted);
+    background: var(--bg-card); border-radius: 8px;
+  }
+  .error { color: var(--red); }
+</style>
+</head>
+<body>
+
+<h1>Canadian Recession Watch</h1>
+<p class="subtitle">Six macro indicators tracked against historical recessions. Built on public data from the Bank of Canada and Statistics Canada. Recession periods per the CD Howe Institute Business Cycle Council.</p>
+
+<div class="info-strip" id="infoStrip">
+  <span class="label">Loading data…</span>
+</div>
+
+<div class="signal-row" id="signalRow"></div>
+
+<div class="chart-grid" id="chartGrid">
+  <div class="loading">Loading charts…</div>
+</div>
+
+<div class="methodology">
+  <h2>How to read the dashboard</h2>
+  <p>Each indicator is a single monthly series shown against grey bands marking the twelve Canadian recessions identified by the <a href="https://cdhowe.org/council/business-cycle-council/" target="_blank" rel="noopener">CD Howe Institute Business Cycle Council</a>. The traffic-light colour at the top-left of each card is a simple rule-based signal — useful as a visual shorthand, not a substitute for judgement. No single indicator should drive a recession call; patterns across several matter more.</p>
+  <p><strong>Signal rules.</strong> <em>Yield curve:</em> red when inverted (spread &lt; 0). <em>Unemployment:</em> red if the Sahm rule is triggered (3-month average ≥ 0.5pp above its trailing 12-month low). <em>Housing starts:</em> red if the 3-month average is below the 12-month average by &gt;10%. <em>Retail sales YoY:</em> red if negative, yellow below 1%. <em>BCPI YoY:</em> red below −20%. <em>CPI-trim:</em> neutral (context rather than a recession signal — the 1–3% BoC target band is shaded).</p>
+  <h2>Data sources</h2>
+  <p>Bank of Canada <a href="https://www.bankofcanada.ca/valet" target="_blank" rel="noopener">Valet API</a> for the BoC Commodity Price Index and CPI-trim / CPI-median. Statistics Canada <a href="https://www150.statcan.gc.ca/t1/wds/rest" target="_blank" rel="noopener">Web Data Service</a> for Labour Force Survey unemployment (14-10-0287), CMHC housing starts (34-10-0158), retail trade (20-10-0008 + 20-10-0056 spliced at 2018-12), headline CPI (18-10-0004), and government bond yields (10-10-0122). Data refreshes nightly via GitHub Actions.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// ---------------------------------------------------------------------------
+// Configuration
+// ---------------------------------------------------------------------------
+const DATA_URL = "data/data.json";
+const RECESSIONS_URL = "data/cdhowe_recessions.json";
+const HISTORY_START = "1990-01";
+
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const css = getComputedStyle(document.documentElement);
+const COLORS = {
+  grid:       css.getPropertyValue('--grid').trim(),
+  fgMuted:    css.getPropertyValue('--fg-muted').trim(),
+  recession:  css.getPropertyValue('--recession').trim(),
+  yieldCurve: '#378ADD',
+  unemp:      '#C4564A',
+  housing:    '#0F6E56',
+  retail:     '#BA7517',
+  bcpi:       '#993556',
+  cpiHead:    '#534AB7',
+  cpiTrim:    '#D85A30',
+  cpiMedian:  '#1D9E75',
+};
+
+// ---------------------------------------------------------------------------
+// Chart.js plugin: recession shading
+// ---------------------------------------------------------------------------
+const recessionShadePlugin = {
+  id: 'recessionShade',
+  beforeDatasetsDraw(chart) {
+    const periods = chart.$recessions || [];
+    if (!periods.length) return;
+    const { ctx, scales: { x, y }, chartArea } = chart;
+    ctx.save();
+    ctx.fillStyle = COLORS.recession;
+    for (const p of periods) {
+      const xStart = x.getPixelForValue(p.startIdx);
+      const xEnd = x.getPixelForValue(p.endIdx);
+      if (xEnd < chartArea.left || xStart > chartArea.right) continue;
+      const L = Math.max(xStart, chartArea.left);
+      const R = Math.min(xEnd, chartArea.right);
+      ctx.fillRect(L, chartArea.top, R - L, chartArea.bottom - chartArea.top);
+    }
+    ctx.restore();
+  }
+};
+
+// ---------------------------------------------------------------------------
+// Chart.js plugin: target band for CPI
+// ---------------------------------------------------------------------------
+const targetBandPlugin = {
+  id: 'targetBand',
+  beforeDatasetsDraw(chart) {
+    const band = chart.$targetBand;
+    if (!band) return;
+    const { ctx, scales: { y }, chartArea } = chart;
+    const yTop = y.getPixelForValue(band.top);
+    const yBot = y.getPixelForValue(band.bottom);
+    ctx.save();
+    ctx.fillStyle = 'rgba(29,158,117,0.10)';
+    ctx.fillRect(chartArea.left, yTop, chartArea.right - chartArea.left, yBot - yTop);
+    ctx.strokeStyle = 'rgba(29,158,117,0.3)';
+    ctx.setLineDash([3, 3]);
+    ctx.lineWidth = 0.5;
+    ctx.beginPath(); ctx.moveTo(chartArea.left, yTop); ctx.lineTo(chartArea.right, yTop); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(chartArea.left, yBot); ctx.lineTo(chartArea.right, yBot); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
+  }
+};
+
+// ---------------------------------------------------------------------------
+// Signal logic — simple rules per indicator
+// ---------------------------------------------------------------------------
+
+function sahmRuleTriggered(unempData) {
+  // Needs ≥15 points for a full window
+  if (unempData.length < 15) return { triggered: false };
+  const recent3 = unempData.slice(-3).map(p => p.value);
+  const avg3 = recent3.reduce((a,b)=>a+b,0) / 3;
+  // trailing 12-month low starting from the 12 months prior to the 3-month window
+  const windowEnd = unempData.length - 3;
+  const windowStart = Math.max(0, windowEnd - 12);
+  const prior12 = unempData.slice(windowStart, windowEnd).map(p => p.value);
+  const low = Math.min(...prior12);
+  return { triggered: avg3 - low >= 0.5, avg3, low, gap: avg3 - low };
+}
+
+function housingStartsSignal(data) {
+  if (data.length < 12) return { level: 'neutral', note: 'insufficient history' };
+  const last3 = data.slice(-3).map(p => p.value);
+  const last12 = data.slice(-12).map(p => p.value);
+  const avg3 = last3.reduce((a,b)=>a+b,0) / last3.length;
+  const avg12 = last12.reduce((a,b)=>a+b,0) / last12.length;
+  const pct = ((avg3 / avg12) - 1) * 100;
+  let level = 'green', note = `3m vs 12m: ${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`;
+  if (pct < -10) level = 'red';
+  else if (pct < -5) level = 'yellow';
+  return { level, note };
+}
+
+function computeSignal(id, data) {
+  if (!data || !data.length) return { level: 'neutral', verdict: '—' };
+  const latest = data[data.length-1].value;
+  switch (id) {
+    case 'yield_curve':
+      if (latest < 0) return { level: 'red', verdict: `inverted ${latest.toFixed(2)}pp` };
+      if (latest < 0.5) return { level: 'yellow', verdict: `flat ${latest.toFixed(2)}pp` };
+      return { level: 'green', verdict: `normal ${latest.toFixed(2)}pp` };
+    case 'unemployment': {
+      const sahm = sahmRuleTriggered(data);
+      if (sahm.triggered) return { level: 'red', verdict: `Sahm +${sahm.gap.toFixed(2)}pp` };
+      if (sahm.gap > 0.3) return { level: 'yellow', verdict: `Sahm gap ${sahm.gap.toFixed(2)}pp` };
+      return { level: 'green', verdict: `Sahm gap ${sahm.gap.toFixed(2)}pp` };
+    }
+    case 'housing_starts': {
+      const s = housingStartsSignal(data);
+      return { level: s.level, verdict: s.note };
+    }
+    case 'retail_sales':
+      if (latest < 0) return { level: 'red', verdict: `${latest.toFixed(1)}% YoY` };
+      if (latest < 1) return { level: 'yellow', verdict: `${latest.toFixed(1)}% YoY` };
+      return { level: 'green', verdict: `${latest.toFixed(1)}% YoY` };
+    case 'bcpi':
+      if (latest < -20) return { level: 'red', verdict: `${latest.toFixed(1)}% YoY` };
+      if (latest < -5) return { level: 'yellow', verdict: `${latest.toFixed(1)}% YoY` };
+      return { level: 'green', verdict: `${latest.toFixed(1)}% YoY` };
+    case 'cpi_trim':
+      // Neutral: just indicate whether within target band
+      if (latest >= 1 && latest <= 3) return { level: 'green', verdict: `${latest.toFixed(1)}% (in band)` };
+      return { level: 'yellow', verdict: `${latest.toFixed(1)}% YoY` };
+  }
+  return { level: 'neutral', verdict: '—' };
+}
+
+// ---------------------------------------------------------------------------
+// Recession periods: convert month strings → indices into a monthly axis
+// ---------------------------------------------------------------------------
+function monthToIndex(m, axisStart) {
+  const [y1, m1] = m.split('-').map(Number);
+  const [y0, m0] = axisStart.split('-').map(Number);
+  return (y1 - y0) * 12 + (m1 - m0);
+}
+
+function buildRecessionBands(recessions, axisStart, axisEnd) {
+  const endIdx = monthToIndex(axisEnd, axisStart);
+  const bands = [];
+  for (const r of recessions) {
+    if (!r.months || !r.months.length) continue;
+    const firstM = r.months[0];
+    const lastM = r.months[r.months.length-1];
+    const s = monthToIndex(firstM, axisStart);
+    const e = monthToIndex(lastM, axisStart) + 1; // inclusive end → +1 for band
+    if (e < 0 || s > endIdx) continue;
+    bands.push({ startIdx: Math.max(s, 0), endIdx: Math.min(e, endIdx) });
+  }
+  return bands;
+}
+
+// ---------------------------------------------------------------------------
+// Dashboard rendering
+// ---------------------------------------------------------------------------
+
+function renderInfoStrip(payload) {
+  const dt = new Date(payload.last_updated);
+  const asOf = dt.toISOString().slice(0, 10) + ' ' + dt.toISOString().slice(11, 16) + ' UTC';
+  const seriesCount = Object.keys(payload.series).length;
+  const el = document.getElementById('infoStrip');
+  el.innerHTML = `
+    <span class="label">Data as of:</span> <span class="val">${asOf}</span>
+    <span class="sep">|</span>
+    <span class="label">Series:</span> <span class="val">${seriesCount}</span>
+    <span class="sep">|</span>
+    <span class="label">History from:</span> <span class="val">${payload.history_from}</span>
+    <button id="refreshBtn" title="Fetch a fresh data.json from the server">↻ Refresh</button>
+  `;
+  document.getElementById('refreshBtn').addEventListener('click', () => load(true));
+}
+
+function renderSignals(signals) {
+  const row = document.getElementById('signalRow');
+  row.innerHTML = signals.map(s => `
+    <div class="signal ${s.level}">
+      <div class="name">${s.name}</div>
+      <div class="value">${s.value}</div>
+      <div class="verdict">${s.verdict}</div>
+    </div>
+  `).join('');
+}
+
+function makeChart(canvasEl, series, recessionBands, options = {}) {
+  const data = series.data;
+  const labels = data.map(p => p.date);
+  const values = data.map(p => p.value);
+  const color = options.color || COLORS.accent;
+
+  const chart = new Chart(canvasEl, {
+    type: 'line',
+    plugins: [recessionShadePlugin, ...(options.targetBand ? [targetBandPlugin] : [])],
+    data: {
+      labels,
+      datasets: [
+        ...(options.extraDatasets || []),
+        {
+          data: values,
+          borderColor: color,
+          backgroundColor: color + '18',
+          borderWidth: 1.4,
+          pointRadius: 0,
+          pointHoverRadius: 3,
+          tension: 0.15,
+          fill: options.fill ?? true,
+        },
+        ...(options.zeroLine ? [{
+          data: labels.map(() => 0),
+          borderColor: COLORS.fgMuted,
+          borderWidth: 0.5,
+          borderDash: [2, 3],
+          pointRadius: 0,
+          fill: false,
+          order: -1,
+        }] : [])
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      layout: { padding: { top: 4, right: 6, bottom: 2, left: 0 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title: ctx => ctx[0].label,
+            label: ctx => {
+              const v = ctx.raw;
+              if (v === null || v === undefined) return '';
+              const fmt = options.tooltipFmt || (x => x.toFixed(2));
+              return `${ctx.dataset.label || series.label}: ${fmt(v)}${options.unitSuffix || ''}`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'category',
+          ticks: {
+            color: COLORS.fgMuted, font: { size: 9 },
+            maxTicksLimit: 7, autoSkip: true, autoSkipPadding: 15, maxRotation: 0,
+            callback(val) {
+              const label = this.getLabelForValue(val);
+              return label ? label.slice(0, 4) : '';
+            },
+          },
+          grid: { display: false },
+        },
+        y: {
+          ticks: {
+            color: COLORS.fgMuted, font: { size: 9 }, maxTicksLimit: 5,
+            callback: v => (options.yTickFmt ? options.yTickFmt(v) : v),
+          },
+          grid: { color: COLORS.grid },
+        },
+      },
+    }
+  });
+  chart.$recessions = recessionBands;
+  if (options.targetBand) chart.$targetBand = options.targetBand;
+  chart.update();
+  return chart;
+}
+
+function renderCharts(payload, recessionsPayload) {
+  const grid = document.getElementById('chartGrid');
+  grid.innerHTML = '';
+
+  const recessions = recessionsPayload.recessions;
+  const signals = [];
+
+  const configs = [
+    {
+      id: 'yield_curve', shortName: 'YIELD CURVE',
+      color: COLORS.yieldCurve, unitSuffix: 'pp',
+      tooltipFmt: v => v.toFixed(2), yTickFmt: v => v.toFixed(1) + 'pp',
+      zeroLine: true,
+      footer: 'Monthly avg of 10Y GoC benchmark minus 3M T-bill. Inversions precede recessions by 6–18 months.',
+      valueFmt: v => `${v >= 0 ? '+' : ''}${v.toFixed(2)}pp`,
+    },
+    {
+      id: 'unemployment', shortName: 'UNEMPLOYMENT',
+      color: COLORS.unemp, unitSuffix: '%',
+      tooltipFmt: v => v.toFixed(1), yTickFmt: v => v.toFixed(0) + '%',
+      footer: 'Unemployment rate, age 15+, seasonally adjusted (StatsCan LFS).',
+      valueFmt: v => `${v.toFixed(1)}%`,
+    },
+    {
+      id: 'housing_starts', shortName: 'HOUSING STARTS',
+      color: COLORS.housing,
+      tooltipFmt: v => Math.round(v).toLocaleString() + 'k',
+      yTickFmt: v => Math.round(v) + 'k',
+      footer: 'CMHC housing starts, Canada, SAAR (thousands of units).',
+      valueFmt: v => `${Math.round(v).toLocaleString()}k`,
+    },
+    {
+      id: 'retail_sales', shortName: 'RETAIL SALES YoY',
+      color: COLORS.retail, unitSuffix: '%',
+      tooltipFmt: v => v.toFixed(1), yTickFmt: v => v.toFixed(0) + '%',
+      zeroLine: true,
+      footer: 'Nominal retail trade YoY; StatsCan 20-10-0008/0056 spliced at 2018-12.',
+      valueFmt: v => `${v >= 0 ? '+' : ''}${v.toFixed(1)}%`,
+    },
+    {
+      id: 'bcpi', shortName: 'BCPI YoY',
+      color: COLORS.bcpi, unitSuffix: '%',
+      tooltipFmt: v => v.toFixed(1), yTickFmt: v => v.toFixed(0) + '%',
+      zeroLine: true,
+      footer: 'BoC Commodity Price Index, monthly, YoY change.',
+      valueFmt: v => `${v >= 0 ? '+' : ''}${v.toFixed(1)}%`,
+    },
+    {
+      id: 'cpi_trim', shortName: 'CPI-TRIM (CORE)',
+      color: COLORS.cpiTrim, unitSuffix: '%',
+      tooltipFmt: v => v.toFixed(1), yTickFmt: v => v.toFixed(0) + '%',
+      targetBand: { bottom: 1, top: 3 },
+      footer: 'BoC core inflation measure. Green band = 1–3% BoC target.',
+      valueFmt: v => `${v.toFixed(1)}%`,
+      extraSeriesId: 'cpi_headline',
+      extraColor: COLORS.cpiHead,
+      extraLabel: 'Headline CPI',
+    },
+  ];
+
+  for (const cfg of configs) {
+    const series = payload.series[cfg.id];
+    if (!series) {
+      signals.push({ level: 'neutral', name: cfg.shortName, value: 'n/a', verdict: 'not loaded' });
+      continue;
+    }
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    const canvasId = `chart-${cfg.id}`;
+    const latest = series.data[series.data.length - 1];
+    const sig = computeSignal(cfg.id, series.data);
+    const latestValueStr = cfg.valueFmt(latest.value);
+    signals.push({
+      level: sig.level, name: cfg.shortName, value: latestValueStr, verdict: sig.verdict
+    });
+    card.innerHTML = `
+      <div class="chart-header">
+        <div class="chart-title">${series.label}</div>
+        <div class="chart-latest">${latestValueStr}</div>
+      </div>
+      <div class="chart-sub">
+        Latest: ${latest.date}  ·  Source: ${series.source.split(',')[0]}
+        ${cfg.extraSeriesId && payload.series[cfg.extraSeriesId] ? `<span style="margin-left:10px;"><span style="display:inline-block;width:14px;border-top:1.2px dashed ${cfg.extraColor};vertical-align:middle;margin-right:3px;"></span>${cfg.extraLabel}</span>` : ''}
+      </div>
+      <div class="chart-canvas-wrap"><canvas id="${canvasId}"></canvas></div>
+      <div class="chart-footer">${cfg.footer}</div>
+    `;
+    grid.appendChild(card);
+
+    // Compute recession bands for this series' axis
+    const axisStart = series.data[0].date;
+    const axisEnd = series.data[series.data.length - 1].date;
+    const bands = buildRecessionBands(recessions, axisStart, axisEnd);
+
+    // Optional overlay: headline CPI on the CPI-trim chart
+    const extraDatasets = [];
+    if (cfg.extraSeriesId && payload.series[cfg.extraSeriesId]) {
+      const extra = payload.series[cfg.extraSeriesId];
+      const lookup = Object.fromEntries(extra.data.map(p => [p.date, p.value]));
+      const alignedValues = series.data.map(p => lookup[p.date] ?? null);
+      extraDatasets.push({
+        label: cfg.extraLabel || extra.label,
+        data: alignedValues,
+        borderColor: cfg.extraColor,
+        backgroundColor: 'transparent',
+        borderWidth: 1, pointRadius: 0, tension: 0.15, fill: false,
+        borderDash: [1, 2],
+      });
+    }
+
+    makeChart(
+      document.getElementById(canvasId),
+      series,
+      bands,
+      {
+        color: cfg.color,
+        unitSuffix: cfg.unitSuffix,
+        tooltipFmt: cfg.tooltipFmt,
+        yTickFmt: cfg.yTickFmt,
+        zeroLine: cfg.zeroLine,
+        targetBand: cfg.targetBand,
+        extraDatasets,
+      }
+    );
+  }
+
+  renderSignals(signals);
+}
+
+// ---------------------------------------------------------------------------
+// Load orchestration
+// ---------------------------------------------------------------------------
+
+async function load(bustCache = false) {
+  try {
+    const dataUrl = bustCache ? `${DATA_URL}?t=${Date.now()}` : DATA_URL;
+    const [payload, recessionsPayload] = await Promise.all([
+      fetch(dataUrl).then(r => { if (!r.ok) throw new Error(`data.json: HTTP ${r.status}`); return r.json(); }),
+      fetch(RECESSIONS_URL).then(r => { if (!r.ok) throw new Error(`cdhowe_recessions.json: HTTP ${r.status}`); return r.json(); }),
+    ]);
+    renderInfoStrip(payload);
+    renderCharts(payload, recessionsPayload);
+  } catch (err) {
+    document.getElementById('chartGrid').innerHTML =
+      `<div class="error">Failed to load data: ${err.message}<br><br>If opening this file locally, run a small HTTP server: <code>python3 -m http.server</code> from the project root.</div>`;
+    console.error(err);
+  }
+}
+
+load();
+</script>
+</body>
+</html>
