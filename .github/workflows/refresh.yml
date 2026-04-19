@@ -41,6 +41,8 @@ jobs:
 
       - name: Build dataset
         run: python scripts/build_dataset.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
 
       - name: Commit refreshed data (if changed)
         run: |
