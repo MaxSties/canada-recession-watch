@@ -1,11 +1,11 @@
 name: Refresh dashboard data
 
 on:
-  # Runs daily at 12:30 UTC — after StatsCan's usual 08:30 ET releases have
-  # had time to propagate, and well before most users would check the
-  # dashboard. Cron is unreliable to the minute, so don't expect exactness.
+  # Runs daily at 14:00 UTC = 8:00am Edmonton MDT (summer) / 7:00am MST (winter).
+  # StatsCan publishes at 8:30am ET = 6:30am Edmonton, so this runs
+  # ~90 minutes after release — enough for data to propagate through the API.
   schedule:
-    - cron: "30 12 * * *"
+    - cron: "0 14 * * *"
   # Allow manual triggering from the GitHub Actions UI
   workflow_dispatch:
   # Also rebuild whenever the fetch logic changes
