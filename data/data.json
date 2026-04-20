@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-04-19T16:52:05+00:00",
+  "last_updated": "2026-04-20T14:18:45+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -12141,8 +12141,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000401",
       "frequency": "monthly",
       "recession_signal": "Not a recession indicator per se, but essential context: defines the BoC's 1\u20133% target band and interacts with policy rate decisions.",
-      "last_observation": "2026-02",
-      "last_value": 1.7791,
+      "last_observation": "2026-03",
+      "last_value": 2.3853,
       "data": [
         {
           "date": "1990-01",
@@ -13879,6 +13879,10 @@
         {
           "date": "2026-02",
           "value": 1.7791
+        },
+        {
+          "date": "2026-03",
+          "value": 2.3853
         }
       ]
     },
