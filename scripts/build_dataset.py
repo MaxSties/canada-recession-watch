@@ -515,6 +515,20 @@ def main() -> int:
         log.error("All series failed; leaving data.json untouched.")
         return 1
 
+    ok_count = sum(1 for v in status.values() if v == "ok")
+    log.info(f"Summary: {ok_count}/{len(status)} series succeeded")
+
+    # Safety threshold: if fewer than half the series succeeded, something
+    # is badly wrong (e.g. StatsCan API outage). Preserve the prior data.json
+    # rather than overwriting it with a degraded partial dataset.
+    MIN_SERIES = max(1, len(status) // 2)  # at least half must succeed
+    if ok_count < MIN_SERIES:
+        log.error(
+            f"Only {ok_count}/{len(status)} series succeeded — below threshold of {MIN_SERIES}. "
+            f"Leaving data.json untouched to preserve last good snapshot."
+        )
+        return 1
+
     payload = {
         "schema_version": "1",
         "last_updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -526,9 +540,6 @@ def main() -> int:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2))
     log.info(f"Wrote {OUTPUT_PATH}  ({OUTPUT_PATH.stat().st_size:,} bytes)")
-
-    ok_count = sum(1 for v in status.values() if v == "ok")
-    log.info(f"Summary: {ok_count}/{len(status)} series succeeded")
     return 0
 
 
