@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-04-23T15:56:35+00:00",
+  "last_updated": "2026-04-24T15:11:22+00:00",
   "history_from": "1990-01",
   "series": {
     "bcpi": {
@@ -6491,15 +6491,15 @@
     }
   },
   "series_status": {
-    "yield_curve": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
-    "unemployment": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
-    "monthly_gdp": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
-    "housing_starts": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
-    "building_permits": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
-    "vehicle_sales": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
-    "retail_sales": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
+    "yield_curve": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromVectorsAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf68a39b0>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
+    "unemployment": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromVectorsAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf63b5670>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
+    "monthly_gdp": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromCubePidCoordAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf63b5df0>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
+    "housing_starts": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromVectorsAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf63b6450>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
+    "building_permits": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromCubePidCoordAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf63b6b10>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
+    "vehicle_sales": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromCubePidCoordAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf68a3e90>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
+    "retail_sales": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromVectorsAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf63b6960>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
     "bcpi": "ok",
-    "cpi_headline": "failed: ReadTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Read timed out. (read timeout=30)",
+    "cpi_headline": "failed: ConnectTimeout: HTTPSConnectionPool(host='www150.statcan.gc.ca', port=443): Max retries exceeded with url: /t1/wds/rest/getDataFromVectorsAndLatestNPeriods (Caused by ConnectTimeoutError(<HTTPSConnection(host='www150.statcan.gc.ca', port=443) at 0x7f9bf63b5640>, 'Connection to www150.statcan.gc.ca timed out. (connect timeout=30)'))",
     "cpi_core": "ok",
     "us_cli": "ok"
   }
