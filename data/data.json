@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-04-29T15:55:56+00:00",
+  "last_updated": "2026-04-30T15:46:40+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -3517,8 +3517,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610043401",
       "frequency": "monthly",
       "recession_signal": "The coincident indicator par excellence. Two consecutive negative monthly GDP prints is often the first real-time alarm for a recession call.",
-      "last_observation": "2026-01",
-      "last_value": 0.5823,
+      "last_observation": "2026-02",
+      "last_value": 0.974,
       "data": [
         {
           "date": "1998-01",
@@ -4818,55 +4818,59 @@
         },
         {
           "date": "2025-01",
-          "value": 2.9378
+          "value": 2.9429
         },
         {
           "date": "2025-02",
-          "value": 2.1496
+          "value": 2.163
         },
         {
           "date": "2025-03",
-          "value": 2.2198
+          "value": 2.2331
         },
         {
           "date": "2025-04",
-          "value": 1.7043
+          "value": 1.727
         },
         {
           "date": "2025-05",
-          "value": 1.4867
+          "value": 1.4877
         },
         {
           "date": "2025-06",
-          "value": 1.3059
+          "value": 1.3134
         },
         {
           "date": "2025-07",
-          "value": 1.7323
+          "value": 1.7453
         },
         {
           "date": "2025-08",
-          "value": 1.5606
+          "value": 1.5659
         },
         {
           "date": "2025-09",
-          "value": 1.4444
+          "value": 1.4637
         },
         {
           "date": "2025-10",
-          "value": 0.7522
+          "value": 0.7521
         },
         {
           "date": "2025-11",
-          "value": 1.0022
+          "value": 1.0521
         },
         {
           "date": "2025-12",
-          "value": 1.0454
+          "value": 1.0449
         },
         {
           "date": "2026-01",
-          "value": 0.5823
+          "value": 0.6476
+        },
+        {
+          "date": "2026-02",
+          "value": 0.974
         }
       ]
     },
