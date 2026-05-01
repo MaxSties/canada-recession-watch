@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-04-30T15:46:40+00:00",
+  "last_updated": "2026-05-01T14:54:44+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -11,8 +11,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1010012201",
       "frequency": "monthly",
       "recession_signal": "Inversion (spread < 0) historically precedes recession by 6\u201318 months.",
-      "last_observation": "2026-03",
-      "last_value": 1.158,
+      "last_observation": "2026-04",
+      "last_value": 1.314,
       "data": [
         {
           "date": "1990-01",
@@ -1753,6 +1753,10 @@
         {
           "date": "2026-03",
           "value": 1.158
+        },
+        {
+          "date": "2026-04",
+          "value": 1.314
         }
       ]
     },
