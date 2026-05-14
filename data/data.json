@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-05-13T16:18:51+00:00",
+  "last_updated": "2026-05-14T16:09:31+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -7049,8 +7049,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010008501",
       "frequency": "monthly",
       "recession_signal": "Big-ticket durables \u2014 highly sensitive to credit conditions and consumer confidence. Tends to turn slightly ahead of the broader consumer cycle.",
-      "last_observation": "2026-02",
-      "last_value": -0.8999,
+      "last_observation": "2026-03",
+      "last_value": -6.6296,
       "data": [
         {
           "date": "1990-01",
@@ -8786,7 +8786,11 @@
         },
         {
           "date": "2026-02",
-          "value": -0.8999
+          "value": -0.8487
+        },
+        {
+          "date": "2026-03",
+          "value": -6.6296
         }
       ],
       "caveat": "Derived from unadjusted levels; YoY strips annual seasonality. Post-2021 data distorted by chip shortages, inventory rebuilds."
@@ -10454,7 +10458,7 @@
       "frequency": "monthly",
       "recession_signal": "Sharp declines in commodity prices pressure resource-sector employment and investment; historically correlated with Canadian slowdowns.",
       "last_observation": "2026-04",
-      "last_value": 24.8182,
+      "last_value": 27.2272,
       "data": [
         {
           "date": "1991-01",
@@ -12090,71 +12094,71 @@
         },
         {
           "date": "2025-01",
-          "value": 8.5303
+          "value": 8.5252
         },
         {
           "date": "2025-02",
-          "value": 7.7959
+          "value": 7.8097
         },
         {
           "date": "2025-03",
-          "value": 2.2681
+          "value": 2.3283
         },
         {
           "date": "2025-04",
-          "value": -5.441
+          "value": -5.4301
         },
         {
           "date": "2025-05",
-          "value": -4.7313
+          "value": -4.7045
         },
         {
           "date": "2025-06",
-          "value": 0.8793
+          "value": 0.892
         },
         {
           "date": "2025-07",
-          "value": 0.8668
+          "value": 0.8524
         },
         {
           "date": "2025-08",
-          "value": 0.7977
+          "value": 0.7579
         },
         {
           "date": "2025-09",
-          "value": 4.8485
+          "value": 4.8194
         },
         {
           "date": "2025-10",
-          "value": 0.5601
+          "value": 0.5932
         },
         {
           "date": "2025-11",
-          "value": 2.3577
+          "value": 2.5025
         },
         {
           "date": "2025-12",
-          "value": 0.8515
+          "value": 0.9921
         },
         {
           "date": "2026-01",
-          "value": -0.5679
+          "value": -0.5347
         },
         {
           "date": "2026-02",
-          "value": 2.075
+          "value": 2.7376
         },
         {
           "date": "2026-03",
-          "value": 19.0305
+          "value": 20.9038
         },
         {
           "date": "2026-04",
-          "value": 24.8182
+          "value": 27.2272
         }
       ],
       "auxiliary": {
-        "level_latest": 757.06
+        "level_latest": 771.76
       }
     },
     "cpi_headline": {
