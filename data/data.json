@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-05-18T16:47:17+00:00",
+  "last_updated": "2026-05-19T16:49:38+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -4890,8 +4890,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410015801",
       "frequency": "monthly",
       "recession_signal": "Residential investment is the most cyclically volatile GDP component. Sharp drops in starts typically precede or coincide with broader weakness.",
-      "last_observation": "2026-03",
-      "last_value": 235.852,
+      "last_observation": "2026-04",
+      "last_value": 279.317,
       "data": [
         {
           "date": "1990-01",
@@ -6623,15 +6623,19 @@
         },
         {
           "date": "2026-01",
-          "value": 237.004
+          "value": 236.436
         },
         {
           "date": "2026-02",
-          "value": 250.961
+          "value": 249.946
         },
         {
           "date": "2026-03",
-          "value": 235.852
+          "value": 239.747
+        },
+        {
+          "date": "2026-04",
+          "value": 279.317
         }
       ]
     },
@@ -6643,8 +6647,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410029201",
       "frequency": "monthly",
       "recession_signal": "Leading indicator \u2014 building permits precede actual housing starts by ~1\u20132 months, leading broader residential investment.",
-      "last_observation": "2026-02",
-      "last_value": 12.0944,
+      "last_observation": "2026-03",
+      "last_value": 13.4842,
       "data": [
         {
           "date": "2018-01",
@@ -6840,203 +6844,207 @@
         },
         {
           "date": "2022-01",
-          "value": 10.803
+          "value": 10.801
         },
         {
           "date": "2022-02",
-          "value": 12.2373
+          "value": 12.1463
         },
         {
           "date": "2022-03",
-          "value": 11.6694
+          "value": 11.5824
         },
         {
           "date": "2022-04",
-          "value": 12.209
+          "value": 12.2809
         },
         {
           "date": "2022-05",
-          "value": 12.0457
+          "value": 12.1361
         },
         {
           "date": "2022-06",
-          "value": 11.7186
+          "value": 11.7818
         },
         {
           "date": "2022-07",
-          "value": 11.0518
+          "value": 11.1155
         },
         {
           "date": "2022-08",
-          "value": 12.1611
+          "value": 12.1373
         },
         {
           "date": "2022-09",
-          "value": 10.1013
+          "value": 10.0808
         },
         {
           "date": "2022-10",
-          "value": 9.9358
+          "value": 9.9364
         },
         {
           "date": "2022-11",
-          "value": 11.4273
+          "value": 11.3964
         },
         {
           "date": "2022-12",
-          "value": 11.258
+          "value": 11.2235
         },
         {
           "date": "2023-01",
-          "value": 10.6788
+          "value": 10.606
         },
         {
           "date": "2023-02",
-          "value": 10.5062
+          "value": 10.4469
         },
         {
           "date": "2023-03",
-          "value": 12.1107
+          "value": 11.9694
         },
         {
           "date": "2023-04",
-          "value": 9.5773
+          "value": 9.7557
         },
         {
           "date": "2023-05",
-          "value": 11.1051
+          "value": 11.1182
         },
         {
           "date": "2023-06",
-          "value": 13.2473
+          "value": 13.3667
         },
         {
           "date": "2023-07",
-          "value": 11.4596
+          "value": 11.5799
         },
         {
           "date": "2023-08",
-          "value": 11.6209
+          "value": 11.6582
         },
         {
           "date": "2023-09",
-          "value": 11.5746
+          "value": 11.6057
         },
         {
           "date": "2023-10",
-          "value": 11.362
+          "value": 11.1835
         },
         {
           "date": "2023-11",
-          "value": 11.6041
+          "value": 11.6241
         },
         {
           "date": "2023-12",
-          "value": 9.9442
+          "value": 9.8765
         },
         {
           "date": "2024-01",
-          "value": 11.004
+          "value": 10.7774
         },
         {
           "date": "2024-02",
-          "value": 12.1374
+          "value": 11.8477
         },
         {
           "date": "2024-03",
-          "value": 11.196
+          "value": 11.0546
         },
         {
           "date": "2024-04",
-          "value": 13.6171
+          "value": 13.8286
         },
         {
           "date": "2024-05",
-          "value": 12.1304
+          "value": 12.1308
         },
         {
           "date": "2024-06",
-          "value": 10.7608
+          "value": 10.9506
         },
         {
           "date": "2024-07",
-          "value": 12.4721
+          "value": 12.5455
         },
         {
           "date": "2024-08",
-          "value": 11.8431
+          "value": 12.1582
         },
         {
           "date": "2024-09",
-          "value": 13.202
+          "value": 13.3071
         },
         {
           "date": "2024-10",
-          "value": 12.6055
+          "value": 12.2889
         },
         {
           "date": "2024-11",
-          "value": 12.0969
+          "value": 12.3866
         },
         {
           "date": "2024-12",
-          "value": 13.3113
+          "value": 13.1004
         },
         {
           "date": "2025-01",
-          "value": 12.8058
+          "value": 12.4834
         },
         {
           "date": "2025-02",
-          "value": 13.2347
+          "value": 13.2131
         },
         {
           "date": "2025-03",
-          "value": 12.557
+          "value": 12.4298
         },
         {
           "date": "2025-04",
-          "value": 11.6462
+          "value": 11.7785
         },
         {
           "date": "2025-05",
-          "value": 13.117
+          "value": 12.9636
         },
         {
           "date": "2025-06",
-          "value": 11.8331
+          "value": 12.1606
         },
         {
           "date": "2025-07",
-          "value": 11.6806
+          "value": 12.0789
         },
         {
           "date": "2025-08",
-          "value": 11.3613
+          "value": 11.7201
         },
         {
           "date": "2025-09",
-          "value": 11.9649
+          "value": 12.1793
         },
         {
           "date": "2025-10",
-          "value": 13.8368
+          "value": 13.4181
         },
         {
           "date": "2025-11",
-          "value": 12.002
+          "value": 12.3341
         },
         {
           "date": "2025-12",
-          "value": 12.765
+          "value": 12.78
         },
         {
           "date": "2026-01",
-          "value": 13.2107
+          "value": 13.2538
         },
         {
           "date": "2026-02",
-          "value": 12.0944
+          "value": 12.2265
+        },
+        {
+          "date": "2026-03",
+          "value": 13.4842
         }
       ],
       "caveat": "Table 34-10-0292 only starts 2018-01. For pre-2018 history, splicing with legacy table 34-10-0008 would be required."
@@ -12169,8 +12177,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000401",
       "frequency": "monthly",
       "recession_signal": "Not a recession indicator per se, but essential context: defines the BoC's 1\u20133% target band and interacts with policy rate decisions.",
-      "last_observation": "2026-03",
-      "last_value": 2.3853,
+      "last_observation": "2026-04",
+      "last_value": 2.8152,
       "data": [
         {
           "date": "1990-01",
@@ -13911,6 +13919,10 @@
         {
           "date": "2026-03",
           "value": 2.3853
+        },
+        {
+          "date": "2026-04",
+          "value": 2.8152
         }
       ]
     },
@@ -13921,8 +13933,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-03",
-      "last_value": 2.2,
+      "last_observation": "2026-04",
+      "last_value": 2.0,
       "data": [
         {
           "date": "1995-01",
@@ -15423,6 +15435,10 @@
         {
           "date": "2026-03",
           "value": 2.2
+        },
+        {
+          "date": "2026-04",
+          "value": 2.0
         }
       ]
     },
@@ -15433,8 +15449,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-03",
-      "last_value": 2.3,
+      "last_observation": "2026-04",
+      "last_value": 2.1,
       "data": [
         {
           "date": "1995-01",
@@ -16935,6 +16951,10 @@
         {
           "date": "2026-03",
           "value": 2.3
+        },
+        {
+          "date": "2026-04",
+          "value": 2.1
         }
       ]
     },
