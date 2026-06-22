@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-06-21T15:49:56+00:00",
+  "last_updated": "2026-06-22T18:12:05+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -12213,8 +12213,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000401",
       "frequency": "monthly",
       "recession_signal": "Not a recession indicator per se, but essential context: defines the BoC's 1\u20133% target band and interacts with policy rate decisions.",
-      "last_observation": "2026-04",
-      "last_value": 2.8152,
+      "last_observation": "2026-05",
+      "last_value": 3.2258,
       "data": [
         {
           "date": "1990-01",
@@ -13959,6 +13959,10 @@
         {
           "date": "2026-04",
           "value": 2.8152
+        },
+        {
+          "date": "2026-05",
+          "value": 3.2258
         }
       ]
     },
@@ -13969,7 +13973,7 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-04",
+      "last_observation": "2026-05",
       "last_value": 2.0,
       "data": [
         {
@@ -15475,6 +15479,10 @@
         {
           "date": "2026-04",
           "value": 2.0
+        },
+        {
+          "date": "2026-05",
+          "value": 2.0
         }
       ]
     },
@@ -15485,7 +15493,7 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-04",
+      "last_observation": "2026-05",
       "last_value": 2.1,
       "data": [
         {
@@ -16990,6 +16998,10 @@
         },
         {
           "date": "2026-04",
+          "value": 2.1
+        },
+        {
+          "date": "2026-05",
           "value": 2.1
         }
       ]
