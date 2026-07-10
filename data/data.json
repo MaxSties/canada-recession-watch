@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-07-09T16:26:48+00:00",
+  "last_updated": "2026-07-10T16:23:34+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -1776,8 +1776,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410028701",
       "frequency": "monthly",
       "recession_signal": "Rising unemployment is the classic coincident-to-lagging recession indicator. The Sahm rule (3-mo avg UR rising \u22650.5ppt above its trailing 12-mo low) has historically triggered early in recessions.",
-      "last_observation": "2026-05",
-      "last_value": 6.6,
+      "last_observation": "2026-06",
+      "last_value": 6.5,
       "data": [
         {
           "date": "1990-01",
@@ -3526,6 +3526,10 @@
         {
           "date": "2026-05",
           "value": 6.6
+        },
+        {
+          "date": "2026-06",
+          "value": 6.5
         }
       ]
     },
@@ -6671,8 +6675,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410029201",
       "frequency": "monthly",
       "recession_signal": "Leading indicator \u2014 building permits precede actual housing starts by ~1\u20132 months, leading broader residential investment.",
-      "last_observation": "2026-04",
-      "last_value": 12.4911,
+      "last_observation": "2026-05",
+      "last_value": 12.3749,
       "data": [
         {
           "date": "2018-01",
@@ -7068,11 +7072,15 @@
         },
         {
           "date": "2026-03",
-          "value": 13.5148
+          "value": 13.4793
         },
         {
           "date": "2026-04",
-          "value": 12.4911
+          "value": 12.59
+        },
+        {
+          "date": "2026-05",
+          "value": 12.3749
         }
       ],
       "caveat": "Table 34-10-0292 only starts 2018-01. For pre-2018 history, splicing with legacy table 34-10-0008 would be required."
