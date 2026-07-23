@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-07-22T15:40:23+00:00",
+  "last_updated": "2026-07-23T15:54:31+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -8859,8 +8859,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010005601",
       "frequency": "monthly",
       "recession_signal": "Nominal retail sales YoY collapsing toward or below zero is a coincident signal of consumer demand weakness.",
-      "last_observation": "2026-04",
-      "last_value": 3.7162,
+      "last_observation": "2026-05",
+      "last_value": 5.8826,
       "data": [
         {
           "date": "1992-01",
@@ -10500,15 +10500,19 @@
         },
         {
           "date": "2026-02",
-          "value": 3.804
+          "value": 3.8234
         },
         {
           "date": "2026-03",
-          "value": 3.4048
+          "value": 3.4102
         },
         {
           "date": "2026-04",
-          "value": 3.7162
+          "value": 3.6043
+        },
+        {
+          "date": "2026-05",
+          "value": 5.8826
         }
       ],
       "caveat": "Nominal, not deflated. Includes autos and gasoline. Spliced across a 2018-12 table transition; overlap disagreement is <1pp on YoY."
