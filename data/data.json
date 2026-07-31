@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-07-30T15:51:26+00:00",
+  "last_updated": "2026-07-31T16:00:48+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -11,8 +11,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1010012201",
       "frequency": "monthly",
       "recession_signal": "Inversion (spread < 0) historically precedes recession by 6\u201318 months.",
-      "last_observation": "2026-06",
-      "last_value": 1.076,
+      "last_observation": "2026-07",
+      "last_value": 1.29,
       "data": [
         {
           "date": "1990-01",
@@ -1765,6 +1765,10 @@
         {
           "date": "2026-06",
           "value": 1.076
+        },
+        {
+          "date": "2026-07",
+          "value": 1.29
         }
       ]
     },
@@ -3541,8 +3545,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610043401",
       "frequency": "monthly",
       "recession_signal": "The coincident indicator par excellence. Two consecutive negative monthly GDP prints is often the first real-time alarm for a recession call.",
-      "last_observation": "2026-04",
-      "last_value": 1.1166,
+      "last_observation": "2026-05",
+      "last_value": 1.6715,
       "data": [
         {
           "date": "1998-01",
@@ -4842,67 +4846,71 @@
         },
         {
           "date": "2025-01",
-          "value": 2.9564
+          "value": 2.9562
         },
         {
           "date": "2025-02",
-          "value": 2.1386
+          "value": 2.1773
         },
         {
           "date": "2025-03",
-          "value": 2.2968
+          "value": 2.3078
         },
         {
           "date": "2025-04",
-          "value": 1.8059
+          "value": 1.85
         },
         {
           "date": "2025-05",
-          "value": 1.5642
+          "value": 1.5118
         },
         {
           "date": "2025-06",
-          "value": 1.3341
+          "value": 1.3072
         },
         {
           "date": "2025-07",
-          "value": 1.7842
+          "value": 1.7588
         },
         {
           "date": "2025-08",
-          "value": 1.6064
+          "value": 1.585
         },
         {
           "date": "2025-09",
-          "value": 1.4983
+          "value": 1.5028
         },
         {
           "date": "2025-10",
-          "value": 0.8233
+          "value": 0.8238
         },
         {
           "date": "2025-11",
-          "value": 1.0985
+          "value": 1.1111
         },
         {
           "date": "2025-12",
-          "value": 1.0058
+          "value": 1.0389
         },
         {
           "date": "2026-01",
-          "value": 0.4106
+          "value": 0.445
         },
         {
           "date": "2026-02",
-          "value": 0.7803
+          "value": 0.7941
         },
         {
           "date": "2026-03",
-          "value": 0.442
+          "value": 0.4643
         },
         {
           "date": "2026-04",
-          "value": 1.1166
+          "value": 1.1408
+        },
+        {
+          "date": "2026-05",
+          "value": 1.6715
         }
       ]
     },
