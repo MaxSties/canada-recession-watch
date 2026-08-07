@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-08-05T16:00:29+00:00",
+  "last_updated": "2026-08-07T14:50:55+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -1780,8 +1780,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410028701",
       "frequency": "monthly",
       "recession_signal": "Rising unemployment is the classic coincident-to-lagging recession indicator. The Sahm rule (3-mo avg UR rising \u22650.5ppt above its trailing 12-mo low) has historically triggered early in recessions.",
-      "last_observation": "2026-06",
-      "last_value": 6.5,
+      "last_observation": "2026-07",
+      "last_value": 6.4,
       "data": [
         {
           "date": "1990-01",
@@ -3534,6 +3534,10 @@
         {
           "date": "2026-06",
           "value": 6.5
+        },
+        {
+          "date": "2026-07",
+          "value": 6.4
         }
       ]
     },
@@ -10533,8 +10537,8 @@
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
       "recession_signal": "Sharp declines in commodity prices pressure resource-sector employment and investment; historically correlated with Canadian slowdowns.",
-      "last_observation": "2026-06",
-      "last_value": 14.1445,
+      "last_observation": "2026-07",
+      "last_value": 12.133,
       "data": [
         {
           "date": "1991-01",
@@ -12239,10 +12243,14 @@
         {
           "date": "2026-06",
           "value": 14.1445
+        },
+        {
+          "date": "2026-07",
+          "value": 12.133
         }
       ],
       "auxiliary": {
-        "level_latest": 719.59
+        "level_latest": 699.99
       }
     },
     "cpi_headline": {
