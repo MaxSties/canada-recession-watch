@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-08-17T14:25:35+00:00",
+  "last_updated": "2026-08-18T14:31:31+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -14037,8 +14037,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-06",
-      "last_value": 1.8,
+      "last_observation": "2026-07",
+      "last_value": 1.9,
       "data": [
         {
           "date": "1995-01",
@@ -15550,7 +15550,11 @@
         },
         {
           "date": "2026-06",
-          "value": 1.8
+          "value": 1.9
+        },
+        {
+          "date": "2026-07",
+          "value": 1.9
         }
       ]
     },
@@ -15561,8 +15565,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-06",
-      "last_value": 1.9,
+      "last_observation": "2026-07",
+      "last_value": 2.0,
       "data": [
         {
           "date": "1995-01",
@@ -17075,6 +17079,10 @@
         {
           "date": "2026-06",
           "value": 1.9
+        },
+        {
+          "date": "2026-07",
+          "value": 2.0
         }
       ]
     },
