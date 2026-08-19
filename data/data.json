@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-08-18T14:31:31+00:00",
+  "last_updated": "2026-08-19T14:31:31+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -4926,8 +4926,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410015801",
       "frequency": "monthly",
       "recession_signal": "Residential investment is the most cyclically volatile GDP component. Sharp drops in starts typically precede or coincide with broader weakness.",
-      "last_observation": "2026-06",
-      "last_value": 238.971,
+      "last_observation": "2026-07",
+      "last_value": 229.074,
       "data": [
         {
           "date": "1990-01",
@@ -6671,15 +6671,19 @@
         },
         {
           "date": "2026-04",
-          "value": 271.501
+          "value": 271.832
         },
         {
           "date": "2026-05",
-          "value": 253.083
+          "value": 254.178
         },
         {
           "date": "2026-06",
-          "value": 238.971
+          "value": 240.773
+        },
+        {
+          "date": "2026-07",
+          "value": 229.074
         }
       ]
     },
