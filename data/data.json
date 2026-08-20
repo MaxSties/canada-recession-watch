@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-08-19T14:31:31+00:00",
+  "last_updated": "2026-08-20T14:34:15+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -10550,7 +10550,7 @@
       "frequency": "monthly",
       "recession_signal": "Sharp declines in commodity prices pressure resource-sector employment and investment; historically correlated with Canadian slowdowns.",
       "last_observation": "2026-07",
-      "last_value": 11.4954,
+      "last_value": 11.7613,
       "data": [
         {
           "date": "1991-01",
@@ -12242,27 +12242,27 @@
         },
         {
           "date": "2026-03",
-          "value": 21.1001
+          "value": 21.1049
         },
         {
           "date": "2026-04",
-          "value": 27.3755
+          "value": 27.3672
         },
         {
           "date": "2026-05",
-          "value": 29.5905
+          "value": 29.5371
         },
         {
           "date": "2026-06",
-          "value": 13.4228
+          "value": 13.4482
         },
         {
           "date": "2026-07",
-          "value": 11.4954
+          "value": 11.7613
         }
       ],
       "auxiliary": {
-        "level_latest": 696.01
+        "level_latest": 697.67
       }
     },
     "cpi_headline": {
