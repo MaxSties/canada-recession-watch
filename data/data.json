@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-10-18T17:04:28+00:00",
+  "last_updated": "2026-10-19T19:38:52+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -4950,8 +4950,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410015801",
       "frequency": "monthly",
       "recession_signal": "Residential investment is the most cyclically volatile GDP component. Sharp drops in starts typically precede or coincide with broader weakness.",
-      "last_observation": "2026-08",
-      "last_value": 229.046,
+      "last_observation": "2026-09",
+      "last_value": 248.896,
       "data": [
         {
           "date": "1990-01",
@@ -6695,23 +6695,27 @@
         },
         {
           "date": "2026-04",
-          "value": 271.832
+          "value": 270.692
         },
         {
           "date": "2026-05",
-          "value": 254.597
+          "value": 254.477
         },
         {
           "date": "2026-06",
-          "value": 240.486
+          "value": 239.838
         },
         {
           "date": "2026-07",
-          "value": 229.36
+          "value": 246.341
         },
         {
           "date": "2026-08",
-          "value": 229.046
+          "value": 242.223
+        },
+        {
+          "date": "2026-09",
+          "value": 248.896
         }
       ]
     },
@@ -12333,8 +12337,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000401",
       "frequency": "monthly",
       "recession_signal": "Not a recession indicator per se, but essential context: defines the BoC's 1\u20133% target band and interacts with policy rate decisions.",
-      "last_observation": "2026-08",
-      "last_value": 3.034,
+      "last_observation": "2026-09",
+      "last_value": 3.0928,
       "data": [
         {
           "date": "1990-01",
@@ -14095,6 +14099,10 @@
         {
           "date": "2026-08",
           "value": 3.034
+        },
+        {
+          "date": "2026-09",
+          "value": 3.0928
         }
       ]
     },
@@ -14105,8 +14113,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-08",
-      "last_value": 1.9,
+      "last_observation": "2026-09",
+      "last_value": 1.8,
       "data": [
         {
           "date": "1995-01",
@@ -15627,6 +15635,10 @@
         {
           "date": "2026-08",
           "value": 1.9
+        },
+        {
+          "date": "2026-09",
+          "value": 1.8
         }
       ]
     },
@@ -15637,8 +15649,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-08",
-      "last_value": 2.0,
+      "last_observation": "2026-09",
+      "last_value": 1.9,
       "data": [
         {
           "date": "1995-01",
@@ -17159,6 +17171,10 @@
         {
           "date": "2026-08",
           "value": 2.0
+        },
+        {
+          "date": "2026-09",
+          "value": 1.9
         }
       ]
     },
