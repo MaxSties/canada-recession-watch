@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-11-04T20:39:56+00:00",
+  "last_updated": "2026-11-05T20:55:52+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -10613,8 +10613,8 @@
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
       "recession_signal": "Sharp declines in commodity prices pressure resource-sector employment and investment; historically correlated with Canadian slowdowns.",
-      "last_observation": "2026-09",
-      "last_value": 23.4966,
+      "last_observation": "2026-10",
+      "last_value": 21.3918,
       "data": [
         {
           "date": "1991-01",
@@ -12331,10 +12331,14 @@
         {
           "date": "2026-09",
           "value": 23.4966
+        },
+        {
+          "date": "2026-10",
+          "value": 21.3918
         }
       ],
       "auxiliary": {
-        "level_latest": 747.71
+        "level_latest": 731.58
       }
     },
     "cpi_headline": {
