@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-11-11T21:03:11+00:00",
+  "last_updated": "2026-11-12T21:18:11+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -6735,8 +6735,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410029201",
       "frequency": "monthly",
       "recession_signal": "Leading indicator \u2014 building permits precede actual housing starts by ~1\u20132 months, leading broader residential investment.",
-      "last_observation": "2026-08",
-      "last_value": 13.5717,
+      "last_observation": "2026-09",
+      "last_value": 12.8769,
       "data": [
         {
           "date": "2018-01",
@@ -7148,11 +7148,15 @@
         },
         {
           "date": "2026-07",
-          "value": 12.4785
+          "value": 12.4796
         },
         {
           "date": "2026-08",
-          "value": 13.5717
+          "value": 13.4297
+        },
+        {
+          "date": "2026-09",
+          "value": 12.8769
         }
       ],
       "caveat": "Table 34-10-0292 only starts 2018-01. For pre-2018 history, splicing with legacy table 34-10-0008 would be required."
@@ -12334,7 +12338,7 @@
         },
         {
           "date": "2026-09",
-          "value": 23.4966
+          "value": 23.4982
         },
         {
           "date": "2026-10",
