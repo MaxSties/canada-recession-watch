@@ -1,6 +1,6 @@
 {
   "schema_version": "1",
-  "last_updated": "2026-11-15T19:32:36+00:00",
+  "last_updated": "2026-11-16T23:12:02+00:00",
   "history_from": "1990-01",
   "series": {
     "yield_curve": {
@@ -7169,8 +7169,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2010008501",
       "frequency": "monthly",
       "recession_signal": "Big-ticket durables \u2014 highly sensitive to credit conditions and consumer confidence. Tends to turn slightly ahead of the broader consumer cycle.",
-      "last_observation": "2026-08",
-      "last_value": 4.8564,
+      "last_observation": "2026-09",
+      "last_value": 7.0072,
       "data": [
         {
           "date": "1990-01",
@@ -8930,7 +8930,11 @@
         },
         {
           "date": "2026-08",
-          "value": 4.8564
+          "value": 4.4654
+        },
+        {
+          "date": "2026-09",
+          "value": 7.0072
         }
       ],
       "caveat": "Derived from unadjusted levels; YoY strips annual seasonality. Post-2021 data distorted by chip shortages, inventory rebuilds."
@@ -10622,7 +10626,7 @@
       "frequency": "monthly",
       "recession_signal": "Sharp declines in commodity prices pressure resource-sector employment and investment; historically correlated with Canadian slowdowns.",
       "last_observation": "2026-10",
-      "last_value": 21.3918,
+      "last_value": 21.2923,
       "data": [
         {
           "date": "1991-01",
@@ -12326,27 +12330,27 @@
         },
         {
           "date": "2026-06",
-          "value": 13.472
+          "value": 13.4656
         },
         {
           "date": "2026-07",
-          "value": 11.8078
+          "value": 11.811
         },
         {
           "date": "2026-08",
-          "value": 18.0125
+          "value": 18.0242
         },
         {
           "date": "2026-09",
-          "value": 23.4982
+          "value": 23.3083
         },
         {
           "date": "2026-10",
-          "value": 21.3918
+          "value": 21.2923
         }
       ],
       "auxiliary": {
-        "level_latest": 731.58
+        "level_latest": 730.98
       }
     },
     "cpi_headline": {
@@ -12357,8 +12361,8 @@
       "source_url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1810000401",
       "frequency": "monthly",
       "recession_signal": "Not a recession indicator per se, but essential context: defines the BoC's 1\u20133% target band and interacts with policy rate decisions.",
-      "last_observation": "2026-09",
-      "last_value": 3.0928,
+      "last_observation": "2026-10",
+      "last_value": 3.0853,
       "data": [
         {
           "date": "1990-01",
@@ -14123,6 +14127,10 @@
         {
           "date": "2026-09",
           "value": 3.0928
+        },
+        {
+          "date": "2026-10",
+          "value": 3.0853
         }
       ]
     },
@@ -14133,7 +14141,7 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-09",
+      "last_observation": "2026-10",
       "last_value": 1.8,
       "data": [
         {
@@ -15658,6 +15666,10 @@
         },
         {
           "date": "2026-09",
+          "value": 1.9
+        },
+        {
+          "date": "2026-10",
           "value": 1.8
         }
       ]
@@ -15669,8 +15681,8 @@
       "source": "Bank of Canada Valet API",
       "source_url": "https://www.bankofcanada.ca/valet",
       "frequency": "monthly",
-      "last_observation": "2026-09",
-      "last_value": 1.9,
+      "last_observation": "2026-10",
+      "last_value": 2.0,
       "data": [
         {
           "date": "1995-01",
@@ -17194,7 +17206,11 @@
         },
         {
           "date": "2026-09",
-          "value": 1.9
+          "value": 2.0
+        },
+        {
+          "date": "2026-10",
+          "value": 2.0
         }
       ]
     },
@@ -17206,24 +17222,24 @@
       "source_url": "https://fred.stlouisfed.org/series/USALOLITOAASTSAM",
       "frequency": "monthly",
       "recession_signal": "Since ~75% of Canadian exports go to the US, the US CLI is a powerful leading indicator for Canada. Values below 100 and falling historically precede Canadian slowdowns.",
-      "last_observation": "2026-09",
-      "last_value": 100.9993,
+      "last_observation": "2026-10",
+      "last_value": 100.9565,
       "data": [
         {
           "date": "1990-01",
-          "value": 99.8074
+          "value": 99.8073
         },
         {
           "date": "1990-02",
-          "value": 99.8371
+          "value": 99.8369
         },
         {
           "date": "1990-03",
-          "value": 99.8356
+          "value": 99.8354
         },
         {
           "date": "1990-04",
-          "value": 99.7597
+          "value": 99.7596
         },
         {
           "date": "1990-05",
@@ -17231,143 +17247,143 @@
         },
         {
           "date": "1990-06",
-          "value": 99.3005
+          "value": 99.3007
         },
         {
           "date": "1990-07",
-          "value": 98.9033
+          "value": 98.9039
         },
         {
           "date": "1990-08",
-          "value": 98.4278
+          "value": 98.4289
         },
         {
           "date": "1990-09",
-          "value": 97.9467
+          "value": 97.9483
         },
         {
           "date": "1990-10",
-          "value": 97.5294
+          "value": 97.5315
         },
         {
           "date": "1990-11",
-          "value": 97.2413
+          "value": 97.2439
         },
         {
           "date": "1990-12",
-          "value": 97.1277
+          "value": 97.1306
         },
         {
           "date": "1991-01",
-          "value": 97.1883
+          "value": 97.1913
         },
         {
           "date": "1991-02",
-          "value": 97.4058
+          "value": 97.4087
         },
         {
           "date": "1991-03",
-          "value": 97.7282
+          "value": 97.7308
         },
         {
           "date": "1991-04",
-          "value": 98.0946
+          "value": 98.0967
         },
         {
           "date": "1991-05",
-          "value": 98.4621
+          "value": 98.4637
         },
         {
           "date": "1991-06",
-          "value": 98.7979
+          "value": 98.7989
         },
         {
           "date": "1991-07",
-          "value": 99.0549
+          "value": 99.0555
         },
         {
           "date": "1991-08",
-          "value": 99.1946
+          "value": 99.1949
         },
         {
           "date": "1991-09",
-          "value": 99.2235
+          "value": 99.2237
         },
         {
           "date": "1991-10",
-          "value": 99.1743
+          "value": 99.1745
         },
         {
           "date": "1991-11",
-          "value": 99.1013
+          "value": 99.1016
         },
         {
           "date": "1991-12",
-          "value": 99.068
+          "value": 99.0684
         },
         {
           "date": "1992-01",
-          "value": 99.1189
+          "value": 99.1192
         },
         {
           "date": "1992-02",
-          "value": 99.2452
+          "value": 99.2453
         },
         {
           "date": "1992-03",
-          "value": 99.4148
+          "value": 99.4147
         },
         {
           "date": "1992-04",
-          "value": 99.5683
+          "value": 99.5682
         },
         {
           "date": "1992-05",
-          "value": 99.6656
+          "value": 99.6654
         },
         {
           "date": "1992-06",
-          "value": 99.6948
+          "value": 99.6946
         },
         {
           "date": "1992-07",
-          "value": 99.684
+          "value": 99.6838
         },
         {
           "date": "1992-08",
-          "value": 99.6739
+          "value": 99.6738
         },
         {
           "date": "1992-09",
-          "value": 99.7073
+          "value": 99.7072
         },
         {
           "date": "1992-10",
-          "value": 99.8081
+          "value": 99.808
         },
         {
           "date": "1992-11",
-          "value": 99.9541
+          "value": 99.9538
         },
         {
           "date": "1992-12",
-          "value": 100.0848
+          "value": 100.0844
         },
         {
           "date": "1993-01",
-          "value": 100.1483
+          "value": 100.1478
         },
         {
           "date": "1993-02",
-          "value": 100.1312
+          "value": 100.1307
         },
         {
           "date": "1993-03",
-          "value": 100.04
+          "value": 100.0396
         },
         {
           "date": "1993-04",
-          "value": 99.906
+          "value": 99.9058
         },
         {
           "date": "1993-05",
@@ -17375,15 +17391,15 @@
         },
         {
           "date": "1993-06",
-          "value": 99.6197
+          "value": 99.6198
         },
         {
           "date": "1993-07",
-          "value": 99.5486
+          "value": 99.5487
         },
         {
           "date": "1993-08",
-          "value": 99.5626
+          "value": 99.5627
         },
         {
           "date": "1993-09",
@@ -17391,135 +17407,135 @@
         },
         {
           "date": "1993-10",
-          "value": 99.8543
+          "value": 99.854
         },
         {
           "date": "1993-11",
-          "value": 100.0911
+          "value": 100.0906
         },
         {
           "date": "1993-12",
-          "value": 100.3532
+          "value": 100.3523
         },
         {
           "date": "1994-01",
-          "value": 100.5985
+          "value": 100.5973
         },
         {
           "date": "1994-02",
-          "value": 100.7982
+          "value": 100.7967
         },
         {
           "date": "1994-03",
-          "value": 100.9464
+          "value": 100.9446
         },
         {
           "date": "1994-04",
-          "value": 101.0397
+          "value": 101.0378
         },
         {
           "date": "1994-05",
-          "value": 101.0809
+          "value": 101.0788
         },
         {
           "date": "1994-06",
-          "value": 101.076
+          "value": 101.0738
         },
         {
           "date": "1994-07",
-          "value": 101.0397
+          "value": 101.0374
         },
         {
           "date": "1994-08",
-          "value": 100.9868
+          "value": 100.9846
         },
         {
           "date": "1994-09",
-          "value": 100.9184
+          "value": 100.9162
         },
         {
           "date": "1994-10",
-          "value": 100.8269
+          "value": 100.8248
         },
         {
           "date": "1994-11",
-          "value": 100.6894
+          "value": 100.6875
         },
         {
           "date": "1994-12",
-          "value": 100.4952
+          "value": 100.4936
         },
         {
           "date": "1995-01",
-          "value": 100.2392
+          "value": 100.238
         },
         {
           "date": "1995-02",
-          "value": 99.9237
+          "value": 99.9229
         },
         {
           "date": "1995-03",
-          "value": 99.5797
+          "value": 99.5795
         },
         {
           "date": "1995-04",
-          "value": 99.2598
+          "value": 99.2601
         },
         {
           "date": "1995-05",
-          "value": 99.0072
+          "value": 99.008
         },
         {
           "date": "1995-06",
-          "value": 98.8389
+          "value": 98.84
         },
         {
           "date": "1995-07",
-          "value": 98.742
+          "value": 98.7432
         },
         {
           "date": "1995-08",
-          "value": 98.6817
+          "value": 98.683
         },
         {
           "date": "1995-09",
-          "value": 98.6296
+          "value": 98.631
         },
         {
           "date": "1995-10",
-          "value": 98.5859
+          "value": 98.5873
         },
         {
           "date": "1995-11",
-          "value": 98.5653
+          "value": 98.5667
         },
         {
           "date": "1995-12",
-          "value": 98.5825
+          "value": 98.5839
         },
         {
           "date": "1996-01",
-          "value": 98.6494
+          "value": 98.6506
         },
         {
           "date": "1996-02",
-          "value": 98.7735
+          "value": 98.7746
         },
         {
           "date": "1996-03",
-          "value": 98.942
+          "value": 98.9429
         },
         {
           "date": "1996-04",
-          "value": 99.1195
+          "value": 99.1201
         },
         {
           "date": "1996-05",
-          "value": 99.2851
+          "value": 99.2855
         },
         {
           "date": "1996-06",
-          "value": 99.4191
+          "value": 99.4193
         },
         {
           "date": "1996-07",
@@ -17527,651 +17543,651 @@
         },
         {
           "date": "1996-08",
-          "value": 99.5863
+          "value": 99.5862
         },
         {
           "date": "1996-09",
-          "value": 99.6567
+          "value": 99.6564
         },
         {
           "date": "1996-10",
-          "value": 99.7286
+          "value": 99.7282
         },
         {
           "date": "1996-11",
-          "value": 99.8103
+          "value": 99.8098
         },
         {
           "date": "1996-12",
-          "value": 99.8981
+          "value": 99.8975
         },
         {
           "date": "1997-01",
-          "value": 100.0012
+          "value": 100.0005
         },
         {
           "date": "1997-02",
-          "value": 100.1278
+          "value": 100.1268
         },
         {
           "date": "1997-03",
-          "value": 100.2644
+          "value": 100.2633
         },
         {
           "date": "1997-04",
-          "value": 100.4065
+          "value": 100.4051
         },
         {
           "date": "1997-05",
-          "value": 100.5489
+          "value": 100.5474
         },
         {
           "date": "1997-06",
-          "value": 100.6857
+          "value": 100.6839
         },
         {
           "date": "1997-07",
-          "value": 100.8053
+          "value": 100.8035
         },
         {
           "date": "1997-08",
-          "value": 100.8913
+          "value": 100.8893
         },
         {
           "date": "1997-09",
-          "value": 100.9485
+          "value": 100.9465
         },
         {
           "date": "1997-10",
-          "value": 100.9786
+          "value": 100.9764
         },
         {
           "date": "1997-11",
-          "value": 100.9761
+          "value": 100.974
         },
         {
           "date": "1997-12",
-          "value": 100.9402
+          "value": 100.9382
         },
         {
           "date": "1998-01",
-          "value": 100.8889
+          "value": 100.8871
         },
         {
           "date": "1998-02",
-          "value": 100.8226
+          "value": 100.8209
         },
         {
           "date": "1998-03",
-          "value": 100.7226
+          "value": 100.7212
         },
         {
           "date": "1998-04",
-          "value": 100.5856
+          "value": 100.5845
         },
         {
           "date": "1998-05",
-          "value": 100.4127
+          "value": 100.4119
         },
         {
           "date": "1998-06",
-          "value": 100.2154
+          "value": 100.2149
         },
         {
           "date": "1998-07",
-          "value": 100.0248
+          "value": 100.0246
         },
         {
           "date": "1998-08",
-          "value": 99.8652
+          "value": 99.8651
         },
         {
           "date": "1998-09",
-          "value": 99.769
+          "value": 99.7689
         },
         {
           "date": "1998-10",
-          "value": 99.7707
+          "value": 99.7706
         },
         {
           "date": "1998-11",
-          "value": 99.8736
+          "value": 99.8733
         },
         {
           "date": "1998-12",
-          "value": 100.041
+          "value": 100.0405
         },
         {
           "date": "1999-01",
-          "value": 100.2475
+          "value": 100.2468
         },
         {
           "date": "1999-02",
-          "value": 100.4577
+          "value": 100.4567
         },
         {
           "date": "1999-03",
-          "value": 100.6468
+          "value": 100.6456
         },
         {
           "date": "1999-04",
-          "value": 100.8124
+          "value": 100.8109
         },
         {
           "date": "1999-05",
-          "value": 100.9541
+          "value": 100.9524
         },
         {
           "date": "1999-06",
-          "value": 101.0615
+          "value": 101.0596
         },
         {
           "date": "1999-07",
-          "value": 101.1381
+          "value": 101.136
         },
         {
           "date": "1999-08",
-          "value": 101.1935
+          "value": 101.1912
         },
         {
           "date": "1999-09",
-          "value": 101.242
+          "value": 101.2395
         },
         {
           "date": "1999-10",
-          "value": 101.2918
+          "value": 101.2893
         },
         {
           "date": "1999-11",
-          "value": 101.3437
+          "value": 101.341
         },
         {
           "date": "1999-12",
-          "value": 101.3794
+          "value": 101.3766
         },
         {
           "date": "2000-01",
-          "value": 101.3727
+          "value": 101.37
         },
         {
           "date": "2000-02",
-          "value": 101.3074
+          "value": 101.3047
         },
         {
           "date": "2000-03",
-          "value": 101.2111
+          "value": 101.2086
         },
         {
           "date": "2000-04",
-          "value": 101.0928
+          "value": 101.0905
         },
         {
           "date": "2000-05",
-          "value": 100.9471
+          "value": 100.9451
         },
         {
           "date": "2000-06",
-          "value": 100.783
+          "value": 100.7812
         },
         {
           "date": "2000-07",
-          "value": 100.601
+          "value": 100.5995
         },
         {
           "date": "2000-08",
-          "value": 100.3869
+          "value": 100.3857
         },
         {
           "date": "2000-09",
-          "value": 100.1375
+          "value": 100.1366
         },
         {
           "date": "2000-10",
-          "value": 99.8362
+          "value": 99.8357
         },
         {
           "date": "2000-11",
-          "value": 99.4933
+          "value": 99.4934
         },
         {
           "date": "2000-12",
-          "value": 99.1242
+          "value": 99.1248
         },
         {
           "date": "2001-01",
-          "value": 98.7875
+          "value": 98.7886
         },
         {
           "date": "2001-02",
-          "value": 98.5294
+          "value": 98.5308
         },
         {
           "date": "2001-03",
-          "value": 98.3625
+          "value": 98.3642
         },
         {
           "date": "2001-04",
-          "value": 98.2786
+          "value": 98.2805
         },
         {
           "date": "2001-05",
-          "value": 98.2523
+          "value": 98.2543
         },
         {
           "date": "2001-06",
-          "value": 98.2291
+          "value": 98.2311
         },
         {
           "date": "2001-07",
-          "value": 98.1844
+          "value": 98.1865
         },
         {
           "date": "2001-08",
-          "value": 98.1215
+          "value": 98.1236
         },
         {
           "date": "2001-09",
-          "value": 98.0807
+          "value": 98.0829
         },
         {
           "date": "2001-10",
-          "value": 98.1315
+          "value": 98.1337
         },
         {
           "date": "2001-11",
-          "value": 98.2997
+          "value": 98.3017
         },
         {
           "date": "2001-12",
-          "value": 98.5641
+          "value": 98.5657
         },
         {
           "date": "2002-01",
-          "value": 98.8701
+          "value": 98.8714
         },
         {
           "date": "2002-02",
-          "value": 99.16
+          "value": 99.1608
         },
         {
           "date": "2002-03",
-          "value": 99.3775
+          "value": 99.3779
         },
         {
           "date": "2002-04",
-          "value": 99.4672
+          "value": 99.4674
         },
         {
           "date": "2002-05",
-          "value": 99.4094
+          "value": 99.4096
         },
         {
           "date": "2002-06",
-          "value": 99.2131
+          "value": 99.2134
         },
         {
           "date": "2002-07",
-          "value": 98.9307
+          "value": 98.9313
         },
         {
           "date": "2002-08",
-          "value": 98.6293
+          "value": 98.6303
         },
         {
           "date": "2002-09",
-          "value": 98.3497
+          "value": 98.3511
         },
         {
           "date": "2002-10",
-          "value": 98.1296
+          "value": 98.1312
         },
         {
           "date": "2002-11",
-          "value": 97.9841
+          "value": 97.9859
         },
         {
           "date": "2002-12",
-          "value": 97.8864
+          "value": 97.8884
         },
         {
           "date": "2003-01",
-          "value": 97.8153
+          "value": 97.8174
         },
         {
           "date": "2003-02",
-          "value": 97.7815
+          "value": 97.7837
         },
         {
           "date": "2003-03",
-          "value": 97.8172
+          "value": 97.8194
         },
         {
           "date": "2003-04",
-          "value": 97.9497
+          "value": 97.9519
         },
         {
           "date": "2003-05",
-          "value": 98.1734
+          "value": 98.1754
         },
         {
           "date": "2003-06",
-          "value": 98.4612
+          "value": 98.4629
         },
         {
           "date": "2003-07",
-          "value": 98.7987
+          "value": 98.8
         },
         {
           "date": "2003-08",
-          "value": 99.1746
+          "value": 99.1753
         },
         {
           "date": "2003-09",
-          "value": 99.5768
+          "value": 99.5769
         },
         {
           "date": "2003-10",
-          "value": 99.984
+          "value": 99.9834
         },
         {
           "date": "2003-11",
-          "value": 100.3629
+          "value": 100.3618
         },
         {
           "date": "2003-12",
-          "value": 100.6805
+          "value": 100.6789
         },
         {
           "date": "2004-01",
-          "value": 100.9197
+          "value": 100.9178
         },
         {
           "date": "2004-02",
-          "value": 101.0633
+          "value": 101.0612
         },
         {
           "date": "2004-03",
-          "value": 101.13
+          "value": 101.1279
         },
         {
           "date": "2004-04",
-          "value": 101.1322
+          "value": 101.1301
         },
         {
           "date": "2004-05",
-          "value": 101.0896
+          "value": 101.0877
         },
         {
           "date": "2004-06",
-          "value": 101.0121
+          "value": 101.0103
         },
         {
           "date": "2004-07",
-          "value": 100.9058
+          "value": 100.9043
         },
         {
           "date": "2004-08",
-          "value": 100.7876
+          "value": 100.7863
         },
         {
           "date": "2004-09",
-          "value": 100.6846
+          "value": 100.6834
         },
         {
           "date": "2004-10",
-          "value": 100.6153
+          "value": 100.6143
         },
         {
           "date": "2004-11",
-          "value": 100.5882
+          "value": 100.5873
         },
         {
           "date": "2004-12",
-          "value": 100.5767
+          "value": 100.5759
         },
         {
           "date": "2005-01",
-          "value": 100.5449
+          "value": 100.5443
         },
         {
           "date": "2005-02",
-          "value": 100.4865
+          "value": 100.486
         },
         {
           "date": "2005-03",
-          "value": 100.4129
+          "value": 100.4125
         },
         {
           "date": "2005-04",
-          "value": 100.36
+          "value": 100.3597
         },
         {
           "date": "2005-05",
-          "value": 100.3533
+          "value": 100.3529
         },
         {
           "date": "2005-06",
-          "value": 100.3896
+          "value": 100.3891
         },
         {
           "date": "2005-07",
-          "value": 100.4427
+          "value": 100.4421
         },
         {
           "date": "2005-08",
-          "value": 100.5134
+          "value": 100.5125
         },
         {
           "date": "2005-09",
-          "value": 100.6174
+          "value": 100.6163
         },
         {
           "date": "2005-10",
-          "value": 100.7673
+          "value": 100.7658
         },
         {
           "date": "2005-11",
-          "value": 100.9487
+          "value": 100.947
         },
         {
           "date": "2005-12",
-          "value": 101.1223
+          "value": 101.1204
         },
         {
           "date": "2006-01",
-          "value": 101.2572
+          "value": 101.2551
         },
         {
           "date": "2006-02",
-          "value": 101.3439
+          "value": 101.3417
         },
         {
           "date": "2006-03",
-          "value": 101.3763
+          "value": 101.374
         },
         {
           "date": "2006-04",
-          "value": 101.3501
+          "value": 101.3479
         },
         {
           "date": "2006-05",
-          "value": 101.2882
+          "value": 101.286
         },
         {
           "date": "2006-06",
-          "value": 101.2267
+          "value": 101.2247
         },
         {
           "date": "2006-07",
-          "value": 101.1873
+          "value": 101.1853
         },
         {
           "date": "2006-08",
-          "value": 101.1919
+          "value": 101.19
         },
         {
           "date": "2006-09",
-          "value": 101.2525
+          "value": 101.2505
         },
         {
           "date": "2006-10",
-          "value": 101.3475
+          "value": 101.3455
         },
         {
           "date": "2006-11",
-          "value": 101.4624
+          "value": 101.4603
         },
         {
           "date": "2006-12",
-          "value": 101.5865
+          "value": 101.5843
         },
         {
           "date": "2007-01",
-          "value": 101.7072
+          "value": 101.7048
         },
         {
           "date": "2007-02",
-          "value": 101.8251
+          "value": 101.8225
         },
         {
           "date": "2007-03",
-          "value": 101.9467
+          "value": 101.9439
         },
         {
           "date": "2007-04",
-          "value": 102.0621
+          "value": 102.0591
         },
         {
           "date": "2007-05",
-          "value": 102.1496
+          "value": 102.1464
         },
         {
           "date": "2007-06",
-          "value": 102.1951
+          "value": 102.1917
         },
         {
           "date": "2007-07",
-          "value": 102.1821
+          "value": 102.1787
         },
         {
           "date": "2007-08",
-          "value": 102.1078
+          "value": 102.1044
         },
         {
           "date": "2007-09",
-          "value": 101.9997
+          "value": 101.9964
         },
         {
           "date": "2007-10",
-          "value": 101.8786
+          "value": 101.8754
         },
         {
           "date": "2007-11",
-          "value": 101.7495
+          "value": 101.7463
         },
         {
           "date": "2007-12",
-          "value": 101.6242
+          "value": 101.621
         },
         {
           "date": "2008-01",
-          "value": 101.4925
+          "value": 101.4894
         },
         {
           "date": "2008-02",
-          "value": 101.3422
+          "value": 101.3392
         },
         {
           "date": "2008-03",
-          "value": 101.1753
+          "value": 101.1723
         },
         {
           "date": "2008-04",
-          "value": 100.9675
+          "value": 100.9647
         },
         {
           "date": "2008-05",
-          "value": 100.6862
+          "value": 100.6837
         },
         {
           "date": "2008-06",
-          "value": 100.2938
+          "value": 100.2918
         },
         {
           "date": "2008-07",
-          "value": 99.7584
+          "value": 99.7572
         },
         {
           "date": "2008-08",
-          "value": 99.0633
+          "value": 99.0632
         },
         {
           "date": "2008-09",
-          "value": 98.2217
+          "value": 98.223
         },
         {
           "date": "2008-10",
-          "value": 97.296
+          "value": 97.2987
         },
         {
           "date": "2008-11",
-          "value": 96.4096
+          "value": 96.4138
         },
         {
           "date": "2008-12",
-          "value": 95.6637
+          "value": 95.6691
         },
         {
           "date": "2009-01",
-          "value": 95.1225
+          "value": 95.1288
         },
         {
           "date": "2009-02",
-          "value": 94.8236
+          "value": 94.8306
         },
         {
           "date": "2009-03",
-          "value": 94.7848
+          "value": 94.7919
         },
         {
           "date": "2009-04",
-          "value": 94.9954
+          "value": 95.0023
         },
         {
           "date": "2009-05",
-          "value": 95.3865
+          "value": 95.3929
         },
         {
           "date": "2009-06",
-          "value": 95.8868
+          "value": 95.8925
         },
         {
           "date": "2009-07",
-          "value": 96.4338
+          "value": 96.4387
         },
         {
           "date": "2009-08",
-          "value": 96.9865
+          "value": 96.9905
         },
         {
           "date": "2009-09",
-          "value": 97.5136
+          "value": 97.5168
         },
         {
           "date": "2009-10",
-          "value": 97.9972
+          "value": 97.9997
         },
         {
           "date": "2009-11",
-          "value": 98.4395
+          "value": 98.4412
         },
         {
           "date": "2009-12",
-          "value": 98.8455
+          "value": 98.8466
         },
         {
           "date": "2010-01",
-          "value": 99.1958
+          "value": 99.1963
         },
         {
           "date": "2010-02",
@@ -18179,127 +18195,127 @@
         },
         {
           "date": "2010-03",
-          "value": 99.6284
+          "value": 99.6281
         },
         {
           "date": "2010-04",
-          "value": 99.6981
+          "value": 99.6976
         },
         {
           "date": "2010-05",
-          "value": 99.6749
+          "value": 99.6744
         },
         {
           "date": "2010-06",
-          "value": 99.5991
+          "value": 99.5985
         },
         {
           "date": "2010-07",
-          "value": 99.5353
+          "value": 99.5348
         },
         {
           "date": "2010-08",
-          "value": 99.5337
+          "value": 99.5331
         },
         {
           "date": "2010-09",
-          "value": 99.6055
+          "value": 99.6048
         },
         {
           "date": "2010-10",
-          "value": 99.7371
+          "value": 99.7362
         },
         {
           "date": "2010-11",
-          "value": 99.9163
+          "value": 99.9152
         },
         {
           "date": "2010-12",
-          "value": 100.1058
+          "value": 100.1045
         },
         {
           "date": "2011-01",
-          "value": 100.2658
+          "value": 100.2643
         },
         {
           "date": "2011-02",
-          "value": 100.3612
+          "value": 100.3595
         },
         {
           "date": "2011-03",
-          "value": 100.3563
+          "value": 100.3546
         },
         {
           "date": "2011-04",
-          "value": 100.2483
+          "value": 100.2468
         },
         {
           "date": "2011-05",
-          "value": 100.0487
+          "value": 100.0474
         },
         {
           "date": "2011-06",
-          "value": 99.7804
+          "value": 99.7795
         },
         {
           "date": "2011-07",
-          "value": 99.4942
+          "value": 99.4936
         },
         {
           "date": "2011-08",
-          "value": 99.2558
+          "value": 99.2554
         },
         {
           "date": "2011-09",
-          "value": 99.1321
+          "value": 99.1318
         },
         {
           "date": "2011-10",
-          "value": 99.153
+          "value": 99.1526
         },
         {
           "date": "2011-11",
-          "value": 99.2985
+          "value": 99.298
         },
         {
           "date": "2011-12",
-          "value": 99.5169
+          "value": 99.5162
         },
         {
           "date": "2012-01",
-          "value": 99.735
+          "value": 99.7341
         },
         {
           "date": "2012-02",
-          "value": 99.888
+          "value": 99.887
         },
         {
           "date": "2012-03",
-          "value": 99.9485
+          "value": 99.9476
         },
         {
           "date": "2012-04",
-          "value": 99.9208
+          "value": 99.9201
         },
         {
           "date": "2012-05",
-          "value": 99.8288
+          "value": 99.8283
         },
         {
           "date": "2012-06",
-          "value": 99.7131
+          "value": 99.7128
         },
         {
           "date": "2012-07",
-          "value": 99.6242
+          "value": 99.6241
         },
         {
           "date": "2012-08",
-          "value": 99.5887
+          "value": 99.5888
         },
         {
           "date": "2012-09",
-          "value": 99.621
+          "value": 99.6211
         },
         {
           "date": "2012-10",
@@ -18307,135 +18323,135 @@
         },
         {
           "date": "2012-11",
-          "value": 99.7939
+          "value": 99.7938
         },
         {
           "date": "2012-12",
-          "value": 99.918
+          "value": 99.9178
         },
         {
           "date": "2013-01",
-          "value": 100.0616
+          "value": 100.0611
         },
         {
           "date": "2013-02",
-          "value": 100.2084
+          "value": 100.2077
         },
         {
           "date": "2013-03",
-          "value": 100.3324
+          "value": 100.3315
         },
         {
           "date": "2013-04",
-          "value": 100.4479
+          "value": 100.4468
         },
         {
           "date": "2013-05",
-          "value": 100.5618
+          "value": 100.5606
         },
         {
           "date": "2013-06",
-          "value": 100.6511
+          "value": 100.6498
         },
         {
           "date": "2013-07",
-          "value": 100.7044
+          "value": 100.7029
         },
         {
           "date": "2013-08",
-          "value": 100.734
+          "value": 100.7325
         },
         {
           "date": "2013-09",
-          "value": 100.7462
+          "value": 100.7446
         },
         {
           "date": "2013-10",
-          "value": 100.7509
+          "value": 100.7491
         },
         {
           "date": "2013-11",
-          "value": 100.7564
+          "value": 100.7546
         },
         {
           "date": "2013-12",
-          "value": 100.7502
+          "value": 100.7485
         },
         {
           "date": "2014-01",
-          "value": 100.7378
+          "value": 100.7361
         },
         {
           "date": "2014-02",
-          "value": 100.7538
+          "value": 100.7521
         },
         {
           "date": "2014-03",
-          "value": 100.7993
+          "value": 100.7976
         },
         {
           "date": "2014-04",
-          "value": 100.8556
+          "value": 100.8537
         },
         {
           "date": "2014-05",
-          "value": 100.9046
+          "value": 100.9026
         },
         {
           "date": "2014-06",
-          "value": 100.9394
+          "value": 100.9374
         },
         {
           "date": "2014-07",
-          "value": 100.956
+          "value": 100.9539
         },
         {
           "date": "2014-08",
-          "value": 100.9567
+          "value": 100.9546
         },
         {
           "date": "2014-09",
-          "value": 100.944
+          "value": 100.942
         },
         {
           "date": "2014-10",
-          "value": 100.9134
+          "value": 100.9115
         },
         {
           "date": "2014-11",
-          "value": 100.8637
+          "value": 100.862
         },
         {
           "date": "2014-12",
-          "value": 100.7895
+          "value": 100.788
         },
         {
           "date": "2015-01",
-          "value": 100.6938
+          "value": 100.6926
         },
         {
           "date": "2015-02",
-          "value": 100.5859
+          "value": 100.5849
         },
         {
           "date": "2015-03",
-          "value": 100.4797
+          "value": 100.4789
         },
         {
           "date": "2015-04",
-          "value": 100.3758
+          "value": 100.3752
         },
         {
           "date": "2015-05",
-          "value": 100.2657
+          "value": 100.2653
         },
         {
           "date": "2015-06",
-          "value": 100.1436
+          "value": 100.1433
         },
         {
           "date": "2015-07",
-          "value": 99.9876
+          "value": 99.9874
         },
         {
           "date": "2015-08",
@@ -18443,59 +18459,59 @@
         },
         {
           "date": "2015-09",
-          "value": 99.634
+          "value": 99.6342
         },
         {
           "date": "2015-10",
-          "value": 99.49
+          "value": 99.4904
         },
         {
           "date": "2015-11",
-          "value": 99.3681
+          "value": 99.3687
         },
         {
           "date": "2015-12",
-          "value": 99.2619
+          "value": 99.2626
         },
         {
           "date": "2016-01",
-          "value": 99.1763
+          "value": 99.1771
         },
         {
           "date": "2016-02",
-          "value": 99.1186
+          "value": 99.1193
         },
         {
           "date": "2016-03",
-          "value": 99.0995
+          "value": 99.1002
         },
         {
           "date": "2016-04",
-          "value": 99.1003
+          "value": 99.101
         },
         {
           "date": "2016-05",
-          "value": 99.1051
+          "value": 99.1058
         },
         {
           "date": "2016-06",
-          "value": 99.1073
+          "value": 99.1079
         },
         {
           "date": "2016-07",
-          "value": 99.1253
+          "value": 99.1259
         },
         {
           "date": "2016-08",
-          "value": 99.1715
+          "value": 99.172
         },
         {
           "date": "2016-09",
-          "value": 99.2604
+          "value": 99.2608
         },
         {
           "date": "2016-10",
-          "value": 99.3869
+          "value": 99.3871
         },
         {
           "date": "2016-11",
@@ -18503,475 +18519,479 @@
         },
         {
           "date": "2016-12",
-          "value": 99.6837
+          "value": 99.6835
         },
         {
           "date": "2017-01",
-          "value": 99.8027
+          "value": 99.8023
         },
         {
           "date": "2017-02",
-          "value": 99.8802
+          "value": 99.8797
         },
         {
           "date": "2017-03",
-          "value": 99.9173
+          "value": 99.9166
         },
         {
           "date": "2017-04",
-          "value": 99.9292
+          "value": 99.9286
         },
         {
           "date": "2017-05",
-          "value": 99.9367
+          "value": 99.936
         },
         {
           "date": "2017-06",
-          "value": 99.9549
+          "value": 99.9541
         },
         {
           "date": "2017-07",
-          "value": 99.9898
+          "value": 99.9889
         },
         {
           "date": "2017-08",
-          "value": 100.0669
+          "value": 100.0658
         },
         {
           "date": "2017-09",
-          "value": 100.1781
+          "value": 100.1769
         },
         {
           "date": "2017-10",
-          "value": 100.3111
+          "value": 100.3097
         },
         {
           "date": "2017-11",
-          "value": 100.4476
-        },
-        {
-          "date": "2017-12",
-          "value": 100.5833
-        },
-        {
-          "date": "2018-01",
-          "value": 100.7176
-        },
-        {
-          "date": "2018-02",
-          "value": 100.8396
-        },
-        {
-          "date": "2018-03",
-          "value": 100.9171
-        },
-        {
-          "date": "2018-04",
-          "value": 100.9434
-        },
-        {
-          "date": "2018-05",
-          "value": 100.9273
-        },
-        {
-          "date": "2018-06",
-          "value": 100.8803
-        },
-        {
-          "date": "2018-07",
-          "value": 100.8054
-        },
-        {
-          "date": "2018-08",
-          "value": 100.7053
-        },
-        {
-          "date": "2018-09",
-          "value": 100.5655
-        },
-        {
-          "date": "2018-10",
-          "value": 100.3812
-        },
-        {
-          "date": "2018-11",
-          "value": 100.1697
-        },
-        {
-          "date": "2018-12",
-          "value": 99.9539
-        },
-        {
-          "date": "2019-01",
-          "value": 99.7553
-        },
-        {
-          "date": "2019-02",
-          "value": 99.5914
-        },
-        {
-          "date": "2019-03",
-          "value": 99.4608
-        },
-        {
-          "date": "2019-04",
-          "value": 99.3408
-        },
-        {
-          "date": "2019-05",
-          "value": 99.2287
-        },
-        {
-          "date": "2019-06",
-          "value": 99.1274
-        },
-        {
-          "date": "2019-07",
-          "value": 99.0446
-        },
-        {
-          "date": "2019-08",
-          "value": 98.9919
-        },
-        {
-          "date": "2019-09",
-          "value": 98.9957
-        },
-        {
-          "date": "2019-10",
-          "value": 99.0511
-        },
-        {
-          "date": "2019-11",
-          "value": 99.1352
-        },
-        {
-          "date": "2019-12",
-          "value": 99.2149
-        },
-        {
-          "date": "2020-01",
-          "value": 99.2511
-        },
-        {
-          "date": "2020-02",
-          "value": 99.2142
-        },
-        {
-          "date": "2020-03",
-          "value": 97.802
-        },
-        {
-          "date": "2020-04",
-          "value": 92.9327
-        },
-        {
-          "date": "2020-05",
-          "value": 94.4589
-        },
-        {
-          "date": "2020-06",
-          "value": 96.3428
-        },
-        {
-          "date": "2020-07",
-          "value": 97.8873
-        },
-        {
-          "date": "2020-08",
-          "value": 98.5952
-        },
-        {
-          "date": "2020-09",
-          "value": 98.8959
-        },
-        {
-          "date": "2020-10",
-          "value": 99.2642
-        },
-        {
-          "date": "2020-11",
-          "value": 99.6639
-        },
-        {
-          "date": "2020-12",
-          "value": 100.0796
-        },
-        {
-          "date": "2021-01",
           "value": 100.446
         },
         {
+          "date": "2017-12",
+          "value": 100.5815
+        },
+        {
+          "date": "2018-01",
+          "value": 100.7155
+        },
+        {
+          "date": "2018-02",
+          "value": 100.8373
+        },
+        {
+          "date": "2018-03",
+          "value": 100.9147
+        },
+        {
+          "date": "2018-04",
+          "value": 100.9408
+        },
+        {
+          "date": "2018-05",
+          "value": 100.9248
+        },
+        {
+          "date": "2018-06",
+          "value": 100.8778
+        },
+        {
+          "date": "2018-07",
+          "value": 100.8029
+        },
+        {
+          "date": "2018-08",
+          "value": 100.703
+        },
+        {
+          "date": "2018-09",
+          "value": 100.5634
+        },
+        {
+          "date": "2018-10",
+          "value": 100.3794
+        },
+        {
+          "date": "2018-11",
+          "value": 100.1683
+        },
+        {
+          "date": "2018-12",
+          "value": 99.9528
+        },
+        {
+          "date": "2019-01",
+          "value": 99.7545
+        },
+        {
+          "date": "2019-02",
+          "value": 99.591
+        },
+        {
+          "date": "2019-03",
+          "value": 99.4606
+        },
+        {
+          "date": "2019-04",
+          "value": 99.3409
+        },
+        {
+          "date": "2019-05",
+          "value": 99.229
+        },
+        {
+          "date": "2019-06",
+          "value": 99.1279
+        },
+        {
+          "date": "2019-07",
+          "value": 99.0452
+        },
+        {
+          "date": "2019-08",
+          "value": 98.9926
+        },
+        {
+          "date": "2019-09",
+          "value": 98.9966
+        },
+        {
+          "date": "2019-10",
+          "value": 99.0525
+        },
+        {
+          "date": "2019-11",
+          "value": 99.1373
+        },
+        {
+          "date": "2019-12",
+          "value": 99.2183
+        },
+        {
+          "date": "2020-01",
+          "value": 99.2564
+        },
+        {
+          "date": "2020-02",
+          "value": 99.2222
+        },
+        {
+          "date": "2020-03",
+          "value": 97.8095
+        },
+        {
+          "date": "2020-04",
+          "value": 92.936
+        },
+        {
+          "date": "2020-05",
+          "value": 94.4547
+        },
+        {
+          "date": "2020-06",
+          "value": 96.3445
+        },
+        {
+          "date": "2020-07",
+          "value": 97.8893
+        },
+        {
+          "date": "2020-08",
+          "value": 98.6035
+        },
+        {
+          "date": "2020-09",
+          "value": 98.9013
+        },
+        {
+          "date": "2020-10",
+          "value": 99.2672
+        },
+        {
+          "date": "2020-11",
+          "value": 99.665
+        },
+        {
+          "date": "2020-12",
+          "value": 100.0795
+        },
+        {
+          "date": "2021-01",
+          "value": 100.445
+        },
+        {
           "date": "2021-02",
-          "value": 100.7998
+          "value": 100.7981
         },
         {
           "date": "2021-03",
-          "value": 101.111
+          "value": 101.109
         },
         {
           "date": "2021-04",
-          "value": 101.3496
+          "value": 101.3475
         },
         {
           "date": "2021-05",
-          "value": 101.4108
+          "value": 101.4087
         },
         {
           "date": "2021-06",
-          "value": 101.4063
+          "value": 101.4044
         },
         {
           "date": "2021-07",
-          "value": 101.3518
+          "value": 101.35
         },
         {
           "date": "2021-08",
-          "value": 101.2817
+          "value": 101.28
         },
         {
           "date": "2021-09",
-          "value": 101.2288
+          "value": 101.2271
         },
         {
           "date": "2021-10",
-          "value": 101.1981
+          "value": 101.1965
         },
         {
           "date": "2021-11",
-          "value": 101.1736
+          "value": 101.1719
         },
         {
           "date": "2021-12",
-          "value": 101.1259
+          "value": 101.1242
         },
         {
           "date": "2022-01",
-          "value": 101.0301
+          "value": 101.0285
         },
         {
           "date": "2022-02",
-          "value": 100.8795
+          "value": 100.8781
         },
         {
           "date": "2022-03",
-          "value": 100.6653
+          "value": 100.6641
         },
         {
           "date": "2022-04",
-          "value": 100.3907
+          "value": 100.3898
         },
         {
           "date": "2022-05",
-          "value": 100.0652
+          "value": 100.0648
         },
         {
           "date": "2022-06",
-          "value": 99.7379
+          "value": 99.7378
         },
         {
           "date": "2022-07",
-          "value": 99.4583
+          "value": 99.4586
         },
         {
           "date": "2022-08",
-          "value": 99.2411
+          "value": 99.2417
         },
         {
           "date": "2022-09",
-          "value": 99.0707
+          "value": 99.0714
         },
         {
           "date": "2022-10",
-          "value": 98.9338
+          "value": 98.9347
         },
         {
           "date": "2022-11",
-          "value": 98.8232
+          "value": 98.8242
         },
         {
           "date": "2022-12",
-          "value": 98.7425
+          "value": 98.7435
         },
         {
           "date": "2023-01",
-          "value": 98.6831
+          "value": 98.6842
         },
         {
           "date": "2023-02",
-          "value": 98.6246
+          "value": 98.6256
         },
         {
           "date": "2023-03",
-          "value": 98.5781
+          "value": 98.5791
         },
         {
           "date": "2023-04",
-          "value": 98.5675
+          "value": 98.5684
         },
         {
           "date": "2023-05",
-          "value": 98.5988
+          "value": 98.5995
         },
         {
           "date": "2023-06",
-          "value": 98.6692
+          "value": 98.6696
         },
         {
           "date": "2023-07",
-          "value": 98.7456
+          "value": 98.7457
         },
         {
           "date": "2023-08",
-          "value": 98.8022
+          "value": 98.8019
         },
         {
           "date": "2023-09",
-          "value": 98.8351
+          "value": 98.8345
         },
         {
           "date": "2023-10",
-          "value": 98.8582
+          "value": 98.8574
         },
         {
           "date": "2023-11",
-          "value": 98.9029
+          "value": 98.9017
         },
         {
           "date": "2023-12",
-          "value": 98.9852
+          "value": 98.9837
         },
         {
           "date": "2024-01",
-          "value": 99.092
+          "value": 99.09
         },
         {
           "date": "2024-02",
-          "value": 99.1987
+          "value": 99.1963
         },
         {
           "date": "2024-03",
-          "value": 99.2809
+          "value": 99.278
         },
         {
           "date": "2024-04",
-          "value": 99.3168
+          "value": 99.3133
         },
         {
           "date": "2024-05",
-          "value": 99.3143
+          "value": 99.3102
         },
         {
           "date": "2024-06",
-          "value": 99.3033
+          "value": 99.2987
         },
         {
           "date": "2024-07",
-          "value": 99.318
+          "value": 99.3128
         },
         {
           "date": "2024-08",
-          "value": 99.3742
+          "value": 99.3685
         },
         {
           "date": "2024-09",
-          "value": 99.4721
+          "value": 99.4658
         },
         {
           "date": "2024-10",
-          "value": 99.5872
+          "value": 99.5803
         },
         {
           "date": "2024-11",
-          "value": 99.6934
+          "value": 99.686
         },
         {
           "date": "2024-12",
-          "value": 99.7566
+          "value": 99.7487
         },
         {
           "date": "2025-01",
-          "value": 99.7534
+          "value": 99.7451
         },
         {
           "date": "2025-02",
-          "value": 99.6895
+          "value": 99.681
         },
         {
           "date": "2025-03",
-          "value": 99.5894
+          "value": 99.5808
         },
         {
           "date": "2025-04",
-          "value": 99.4965
+          "value": 99.4879
         },
         {
           "date": "2025-05",
-          "value": 99.4596
+          "value": 99.4509
         },
         {
           "date": "2025-06",
-          "value": 99.4725
+          "value": 99.4637
         },
         {
           "date": "2025-07",
-          "value": 99.5054
+          "value": 99.4964
         },
         {
           "date": "2025-08",
-          "value": 99.5474
+          "value": 99.538
         },
         {
           "date": "2025-09",
-          "value": 99.6072
+          "value": 99.5973
         },
         {
           "date": "2025-10",
-          "value": 99.6954
+          "value": 99.6844
         },
         {
           "date": "2025-11",
-          "value": 99.8216
+          "value": 99.809
         },
         {
           "date": "2025-12",
-          "value": 99.9792
+          "value": 99.9645
         },
         {
           "date": "2026-01",
-          "value": 100.1518
+          "value": 100.134
         },
         {
           "date": "2026-02",
-          "value": 100.3057
+          "value": 100.2841
         },
         {
           "date": "2026-03",
-          "value": 100.4315
+          "value": 100.405
         },
         {
           "date": "2026-04",
-          "value": 100.5444
+          "value": 100.5125
         },
         {
           "date": "2026-05",
-          "value": 100.65
+          "value": 100.612
         },
         {
           "date": "2026-06",
-          "value": 100.763
+          "value": 100.7186
         },
         {
           "date": "2026-07",
-          "value": 100.8691
+          "value": 100.8179
         },
         {
           "date": "2026-08",
-          "value": 100.9464
+          "value": 100.8874
         },
         {
           "date": "2026-09",
-          "value": 100.9993
+          "value": 100.931
+        },
+        {
+          "date": "2026-10",
+          "value": 100.9565
         }
       ],
       "caveat": "Conference Board LEI (first choice) is not freely available on FRED. OECD CLI is the standard free alternative and performs similarly."
